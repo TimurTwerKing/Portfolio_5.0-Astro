@@ -1,0 +1,26 @@
+@import "./variables.css";
+
+/* Global Styles */
+body {
+  background-color: var(--page-background-1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  margin-bottom: auto;
+}
+
+/* Main Content Styles */
+.main {
+  flex-grow: 1; /* Permite que el main ocupe el espacio restante */
+  padding: 1rem;
+  background-color: var(--page-background-2);
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: auto;
+}

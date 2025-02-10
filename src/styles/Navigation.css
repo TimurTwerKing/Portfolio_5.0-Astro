@@ -1,15 +1,11 @@
 .nav-links {
   display: flex;
-  background-color: var(--component-background-1);
   width: 100%;
-  
 }
 .nav-links a {
   text-decoration: none;
   color: #012030;
-  font-family: "Poiret One", cursive;
   font-size: 0.8rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;

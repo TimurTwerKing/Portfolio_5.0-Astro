@@ -1,27 +1,55 @@
 ---
-import '../styles/ResumeContent.css';
+import "../styles/ResumeContent.css";
+const pageTitle = Astro.props.title || "Skills";
 ---
 
-<section class="resume-content">
-  <h2>Resume</h2>
-  <div class="experience">
-    <h3>Experience</h3>
-    <p>Some experience...</p>
-  </div>
-  <div class="frameworks">
-    <h3>Frameworks</h3>
-    <ul>
-      <li>React</li>
-      <li>Angular</li>
-      <li>Vue</li>
-    </ul>
-  </div>
-  <div class="technologies">
-    <h3>Technologies</h3>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML</li>
-      <li>CSS</li>
-    </ul>
+<section class="skills-section">
+  <div class="skills-content-wrapper">
+    <h1 class="skills-page-title">{pageTitle}</h1>
+    <div class="skills-grid-container">
+      <div class="column-group">
+        <div class="column-content">
+          <h2 class="column-title">Programming Languages</h2>
+          <ul class="skill-list">
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fab fa-sass"></i> SCSS</li>
+            <li><i class="fab fa-java"></i> Java</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-js-square"></i> TypeScript</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fab fa-php"></i> PHP</li>
+          </ul>
+        </div>
+        <div class="column-content">
+          <h2 class="column-title">Frameworks</h2>
+          <ul class="skill-list">
+            <li><i class="fas fa-code-branch"></i> Git</li>
+            <li><i class="fab fa-laravel"></i> Laravel</li>
+            <li><i class="fab fa-angular"></i> Angular</li>
+            <li><i class="fas fa-pencil-ruler"></i> Tailwind</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column-group">
+        <div class="column-content">
+          <h2 class="column-title">Technologies</h2>
+          <ul class="skill-list">
+            <li><i class="fas fa-server"></i> VM</li>
+            <li><i class="fab fa-windows"></i> Windows</li>
+            <li><i class="fab fa-linux"></i> Linux</li>
+          </ul>
+        </div>
+        <div class="column-content">
+          <h2 class="column-title">Languages</h2>
+          <ul class="skill-list">
+            <li>🇷🇺 Russian</li>
+            <li>🇺🇦 Ukrainian</li>
+            <li>🇪🇸 Spanish</li>
+            <li>🇬🇧 English</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

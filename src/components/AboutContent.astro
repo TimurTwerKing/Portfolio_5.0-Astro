@@ -1,18 +1,22 @@
 ---
-import '../styles/AboutContent.css';
+import "../styles/AboutContent.css";
+const pageTitle = Astro.props.title || "About Me"; // Default title
 ---
 
-<section class="about-content">
-  <h2>About Me</h2>
-  <div class="about-description">
-    <p>Some text about me...</p>
-  </div>
-  <div class="skills">
-    <h3>Skills</h3>
-    <ul>
-      <li>Programming</li>
-      <li>Web Development</li>
-      <li>UI/UX Design</li>
-    </ul>
+<section class="about-me">
+  <h1 class="about-me-title">{pageTitle}</h1>
+  <div class="about-me-content">
+    <p>
+      I'm a programming student with a passion for music and computers. With a
+      background in the automotive industry as a painter and bodybuilder
+      specialist, I've honed my skills in precision, patience, and attention to
+      detail over 10 years. Known for my humor and energy, I thrive on logic,
+      equilibrium, and precision, which naturally led me to the world of
+      programming.
+    </p>
+    <h2>
+      Following the white rabbit, choosing the right Morpheus pill, and eating
+      the Oracle cookie. (Hope you get the reference!)
+    </h2>
   </div>
 </section>

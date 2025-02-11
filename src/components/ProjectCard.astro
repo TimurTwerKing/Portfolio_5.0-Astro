@@ -1,10 +1,9 @@
 ---
-import '../styles/ProjectCard.css';
-const { title, description, image } = Astro.props;
+const { title, description, image, link } = Astro.props;
 ---
 
-<div class="project-card">
-  <img src={image} alt={title} />
-  <h3>{title}</h3>
+<a href={link} class="bg-white rounded-lg shadow-md p-4 block"> {/* Enlace a la card */}
+  <img src={image} alt={title} class="w-full h-auto mb-2" />
+  <h3 class="text-xl font-semibold mb-1">{title}</h3>
   <p>{description}</p>
-</div>
+</a>

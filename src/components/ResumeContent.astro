@@ -1,52 +1,47 @@
----
-import "../styles/ResumeContent.css";
-const pageTitle = Astro.props.title || "Skills";
----
-
-<section class="skills-section">
-  <div class="skills-content-wrapper">
-    <h1 class="skills-page-title">{pageTitle}</h1>
-    <div class="skills-grid-container">
-      <div class="column-group">
-        <div class="column-content">
-          <h2 class="column-title">Programming Languages</h2>
-          <ul class="skill-list">
-            <li><i class="fab fa-html5"></i> HTML</li>
-            <li><i class="fab fa-css3-alt"></i> CSS</li>
-            <li><i class="fab fa-sass"></i> SCSS</li>
-            <li><i class="fab fa-java"></i> Java</li>
-            <li><i class="fab fa-js"></i> JavaScript</li>
-            <li><i class="fab fa-js-square"></i> TypeScript</li>
-            <li><i class="fas fa-database"></i> MySQL</li>
-            <li><i class="fab fa-php"></i> PHP</li>
+<section class="flex flex-col items-center justify-center w-full p-4 box-border overflow-hidden">
+  <div class="max-w-[960px] w-full">
+    <h1 class="text-3xl mb-4 text-center sm:text-4xl">Skills</h1>
+    <div class="grid grid-cols-2 gap-8">
+      <div class="flex flex-col text-center">  
+        <div class="mb-8">
+          <h2 class="text-xl mb-4">Programming</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg"><i class="fab fa-html5 mr-2"></i> HTML</li>
+            <li class="mb-2 text-lg"><i class="fab fa-css3-alt mr-2"></i> CSS</li>
+            <li class="mb-2 text-lg"><i class="fab fa-sass mr-2"></i> SCSS</li>
+            <li class="mb-2 text-lg"><i class="fab fa-java mr-2"></i> Java</li>
+            <li class="mb-2 text-lg"><i class="fab fa-js mr-2"></i> JavaScript</li>
+            <li class="mb-2 text-lg"><i class="fab fa-js-square mr-2"></i> TypeScript</li>
+            <li class="mb-2 text-lg"><i class="fas fa-database mr-2"></i> MySQL</li>
+            <li class="mb-2 text-lg"><i class="fab fa-php mr-2"></i> PHP</li>
           </ul>
         </div>
-        <div class="column-content">
-          <h2 class="column-title">Frameworks</h2>
-          <ul class="skill-list">
-            <li><i class="fas fa-code-branch"></i> Git</li>
-            <li><i class="fab fa-laravel"></i> Laravel</li>
-            <li><i class="fab fa-angular"></i> Angular</li>
-            <li><i class="fas fa-pencil-ruler"></i> Tailwind</li>
+        <div class="mb-8">
+          <h2 class="text-xl mb-4">Technologies</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg"><i class="fas fa-server mr-2"></i> VM</li>
+            <li class="mb-2 text-lg"><i class="fab fa-windows mr-2"></i> Windows</li>
+            <li class="mb-2 text-lg"><i class="fab fa-linux mr-2"></i> Linux</li>
           </ul>
         </div>
       </div>
-      <div class="column-group">
-        <div class="column-content">
-          <h2 class="column-title">Technologies</h2>
-          <ul class="skill-list">
-            <li><i class="fas fa-server"></i> VM</li>
-            <li><i class="fab fa-windows"></i> Windows</li>
-            <li><i class="fab fa-linux"></i> Linux</li>
+      <div class="flex flex-col text-center"> 
+        <div class="mb-8">
+          <h2 class="text-xl mb-4">Frameworks</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg"><i class="fas fa-code-branch mr-2"></i> Git</li>
+            <li class="mb-2 text-lg"><i class="fab fa-laravel mr-2"></i> Laravel</li>
+            <li class="mb-2 text-lg"><i class="fab fa-angular mr-2"></i> Angular</li>
+            <li class="mb-2 text-lg"><i class="fas fa-pencil-ruler mr-2"></i> Tailwind</li>
           </ul>
         </div>
-        <div class="column-content">
-          <h2 class="column-title">Languages</h2>
-          <ul class="skill-list">
-            <li>🇷🇺 Russian</li>
-            <li>🇺🇦 Ukrainian</li>
-            <li>🇪🇸 Spanish</li>
-            <li>🇬🇧 English</li>
+        <div class="mb-8">
+          <h2 class="text-xl mb-4">Languages</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg">🇷🇺 Russian</li>
+            <li class="mb-2 text-lg">🇺🇦 Ukrainian</li>
+            <li class="mb-2 text-lg">🇪🇸 Spanish</li>
+            <li class="mb-2 text-lg">🇬🇧 English</li>
           </ul>
         </div>
       </div>

@@ -1,11 +1,8 @@
----
-import "../styles/AboutContent.css";
-const pageTitle = Astro.props.title || "About Me"; // Default title
----
-
-<section class="about-me">
-  <h1 class="about-me-title">{pageTitle}</h1>
-  <div class="about-me-content">
+<section
+  class="flex flex-col items-center w-full p-4 box-border overflow-hidden"
+>
+  <h1 class="text-3xl mb-4 text-center sm:text-4xl">About Me</h1>
+  <div class="text-justify max-w-xl mx-auto leading-relaxed">
     <p>
       I'm a programming student with a passion for music and computers. With a
       background in the automotive industry as a painter and bodybuilder
@@ -14,7 +11,7 @@ const pageTitle = Astro.props.title || "About Me"; // Default title
       equilibrium, and precision, which naturally led me to the world of
       programming.
     </p>
-    <h2>
+    <h2 class="mt-4 text-xl font-semibold text-center">
       Following the white rabbit, choosing the right Morpheus pill, and eating
       the Oracle cookie. (Hope you get the reference!)
     </h2>

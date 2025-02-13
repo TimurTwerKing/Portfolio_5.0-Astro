@@ -22,10 +22,13 @@ const { pageName } = Astro.props;
     />
     <title>{pageName}</title>
   </head>
-  <body>
+  <body
+    class="xl:p-24 flex flex-col min-h-screen h-screen w-screen m-0 overflow-x-hidden bg-[var(--letter-color-1)]"
+  >
     <Header />
-
-    <slot />
+    <div class="bg-[var(--page-background-1)]">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

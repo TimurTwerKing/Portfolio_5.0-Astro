@@ -1,17 +1,28 @@
-<section class="flex flex-col items-center w-full p-4 box-border overflow-hidden gap-4">
-  <h1 class="text-3xl text-center sm:text-4xl"><strong>About Me</strong></h1>
-  <div class="max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto leading-relaxed text-center sm:text-justify">
-    <p>
-      I'm a programming student with a passion for music and computers. With a
-      background in the automotive industry as a painter and bodybuilder
-      specialist, I've honed my skills in precision, patience, and attention to
-      detail over 10 years. Known for my humor and energy, I thrive on logic,
-      equilibrium, and precision, which naturally led me to the world of
-      programming.
-    </p>
-    <h2 class="mt-4 text-xl font-semibold text-center">
-      Following the white rabbit, choosing the right Morpheus pill, and eating
-      the Oracle cookie. (Hope you get the reference!)
-    </h2>
-  </div>
-</section>
+---
+import DualLayout from "../layouts/DualLayout.astro";
+---
+
+<DualLayout pageName="About Me">
+  <section class="flex flex-col items-center w-full h-full sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-hidden">
+    <h1 class="text-3xl text-center sm:text-4xl pb-10">
+      <strong>About Me</strong>
+    </h1>
+    <div
+      class="max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto leading-relaxed text-center sm:text-justify"
+    >
+      <p>
+        I'm a web programming student with a passion for music and computers. I
+        have a professional background in the automotive industry as a painter
+        and bodybuilder specialist. I've developed my skills in precision,
+        patience, and attention to detail for over 10 years. Known for my humor
+        and energetic personality. I look foward to colaborationg with
+        professionals who share my enthusiasm for grow in this industry like a
+        mushroom.
+      </p>
+      <spam class="mt-4 text-xl font-semibold text-center">
+        Following the white rabbit, choosing the right Morpheus pill, and eating
+        the Oracle cookie. (<strong>Hope you get the reference!</strong>)
+      </spam>
+    </div>
+  </section>
+</DualLayout>

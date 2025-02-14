@@ -20,13 +20,17 @@ const { pageName } = Astro.props;
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/global.css" />
     <title>{pageName}</title>
   </head>
   <body
-    class="xl:p-24 flex flex-col min-h-screen h-screen w-screen m-0 overflow-x-hidden bg-[var(--letter-color-1)]"
+    class="xl:p-15 flex flex-col min-h-screen h-screen w-screen m-0 overflow-x-hidden justify-between 
+    text-[var(--letter-color)] bg-[var(--total-background)]"
   >
     <Header />
-    <div class="bg-[var(--page-background-1)]">
+    <div
+      class="bg-[var(--page-background-1)] text-[var(--letter-color)] flex-grow"
+    >
       <slot />
     </div>
     <Footer />

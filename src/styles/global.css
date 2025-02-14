@@ -1,75 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import "tailwindcss";
 
-/* Estilos globales */
-* {
-  font-family: "Poiret One", cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-}
-
-section {
-  color: var(--letter-color-1);
-  /* margin-top: 4rem; */
-  /* padding: 1rem; */
-  background-color: var(--page-background-2);
-  /* width: 100%; */
-  /* padding-top: 4rem; */
-  /* padding-bottom: 4rem; */
-}
-
-/* body {
-  background-color: var(--page-background-1);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-header {
-  position: fixed;
-  
-  width: 100%;
-  height: auto;
-  background-color: var(--component-background-1);
-  z-index: 100;
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  height: 4rem;
-  background-color: var(--component-background-1);
-  z-index: 100;
-} */
-
 /* Variante 1 */
 :root {
-  --component-background-1: #dafdba;
-  --page-background-1: #45c4b0;
-  --letter-color-1: #13678a;
+  --component-background: #dafdba;
+  --page-background: #45c4b0;
+  --total-background: #e6f7d1;
+  --letter-color: #015249;
+  --border-color: #014f43;
+  --hover-bg: #1d7061;
+  --hover-text: #dafdba;
 }
 
 /* Variante 2 */
 :root.variant-2 {
-  --component-background-2: #fab4bf;
-  --page-background-2: #f8ffb5;
-  --letter-color-2: #13678a;
+  --component-background: #fab4bf;
+  --page-background: #f8ffb5;
+  --total-background: #ffe4e6;
+  --letter-color: #5b2c26;
+  --border-color: #704a3c;
+  --hover-bg: #dd7586;
+  --hover-text: #fab4bf;
 }
 
 /* Variante 3 */
 :root.variant-3 {
-  --component-background-3: #ffb30d;
-  --page-background-3: #085454;
-  --letter-color-3: #ffffff;
+  --component-background: #ffb30d;
+  --page-background: #085454;
+  --total-background: #ffe8bb;
+  --letter-color: #fbfafa;
+  --border-color: #1b9aaa;
+  --hover-bg: #1b9aaa;
+  --hover-text: #085454;
 }
 
-/* main {
-  color: var(--letter-color-1);
-  flex-grow: 1; 
-  padding: 1rem;
-  background-color: var(--page-background-2);
-  width: 100%;
-  overflow-y: auto; 
-} */
+/* Estilos globales */
+* {
+  font-family: "Poiret One", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}

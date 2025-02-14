@@ -3,19 +3,10 @@ import Name from "./Name.astro";
 import Navigation from "./Navigation.astro";
 ---
 
-<header class="xs:fixed w-full z-50 xl:h-20 xl:flex xl:items-center xl:justify-between xl:gap-8 xl:-mt-15 ">
+<header
+  class="w-full xs:fixed z-50 xl:h-20 xl:flex xl:items-center xl:justify-between
+  xl:gap-8 xl:-mt-15 text-[var(--letter-color)]"
+>
   <Name />
   <Navigation />
 </header>
-
-<!-- xs:fixed xl:h-16 w-full xl:flex xl:flex-row xl:justify-between xl:items-center xl:p-8 -->
-
-<!-- position: absolute;
-  right: 0;
-  width: 20%;
-  top: 10px;
-  flex-direction: revert-layer;
-  display: flex;
-  justify-content: space-around;
-  gap: 50%;
-  padding: 20px; -->

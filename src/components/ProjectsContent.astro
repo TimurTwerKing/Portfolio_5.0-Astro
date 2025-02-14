@@ -1,17 +1,20 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
 const projects = await Astro.glob("../content/projects.md");
+import DualLayout from "../layouts/DualLayout.astro";
 ---
 
-<section
-  class="flex flex-col items-center w-full p-4 box-border overflow-hidden gap-4"
->
-  <h2 class="text-3xl text-center sm:text-4xl"><strong>Projects</strong></h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl">
-    {
-      projects[0].frontmatter.projects.map((project: any) => (
-        <ProjectCard {...project} />
-      ))
-    }
-  </div>
-</section>
+<DualLayout pageName="Projects">
+  <section
+    class="flex flex-col items-center w-full h-full xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-hidden"
+  >
+    <h1 class="text-3xl text-start sm:text-4xl pb-10"><strong>Projects</strong></h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl">
+      {
+        projects[0].frontmatter.projects.map((project: any) => (
+          <ProjectCard {...project} />
+        ))
+      }
+    </div>
+  </section>
+</DualLayout>

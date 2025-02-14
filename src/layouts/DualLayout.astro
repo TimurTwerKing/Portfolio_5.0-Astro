@@ -1,0 +1,32 @@
+---
+import Index from "../components/IndexContent.astro";
+const { pageName } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <title>{pageName}</title>
+  </head>
+  <body data-page={pageName.toLowerCase()} class="h-screen">
+    <div
+      id="layout-container"
+      class="flex flex-col xl:flex-row items-start w-full"
+    >
+      <div
+        class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)]"
+      >
+        <Index />
+      </div>
+      <div
+        class="w-full xl:w-1/2 bg-[var(--page-background)] p-5 flex items-center justify-center overflow-y-auto max-h-screen"
+      >
+        <slot />
+      </div>
+    </div>
+    <script src="/js/theme-toggle.js" defer></script>
+  </body>
+</html>

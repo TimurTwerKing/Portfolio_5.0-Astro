@@ -3,57 +3,86 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Resume">
-<section
-  class="flex flex-col items-center w-full h-full xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-hidden"
->
-  <h1 class="text-3xl text-center sm:text-4xl pb-10"><strong>Skills</strong></h1>
-  <div class="grid grid-cols-2 gap-8 max-w-[960px] w-full">
-    <div class="flex flex-col text-center">
-      <h2 class="text-xl mb-4">Programming</h2>
-      <ul class="list-none p-0">
-        <li class="mb-2 text-lg"><i class="fab fa-html5 mr-2"></i> HTML</li>
-        <li class="mb-2 text-lg"><i class="fab fa-css3-alt mr-2"></i> CSS</li>
-        <li class="mb-2 text-lg"><i class="fab fa-sass mr-2"></i> SCSS</li>
-        <li class="mb-2 text-lg"><i class="fab fa-java mr-2"></i> Java</li>
-        <li class="mb-2 text-lg"><i class="fab fa-js mr-2"></i> JavaScript</li>
-        <li class="mb-2 text-lg">
-          <i class="fab fa-js-square mr-2"></i> TypeScript
-        </li>
-        <li class="mb-2 text-lg"><i class="fas fa-database mr-2"></i> MySQL</li>
-        <li class="mb-2 text-lg"><i class="fab fa-php mr-2"></i> PHP</li>
-      </ul>
-      <h2 class="text-xl mb-4">Technologies</h2>
-      <ul class="list-none p-0">
-        <li class="mb-2 text-lg"><i class="fas fa-server mr-2"></i> VM</li>
-        <li class="mb-2 text-lg">
-          <i class="fab fa-windows mr-2"></i> Windows
-        </li>
-        <li class="mb-2 text-lg"><i class="fab fa-linux mr-2"></i> Linux</li>
-      </ul>
+  <section
+    class="flex flex-col items-start w-full h-screen sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-auto"
+  >
+    <div class="w-full pt-10 xl:pb-10">
+      <h1 class="text-3xl xl:text-4xl mb-0 whitespace-nowrap">
+        <strong>Skills</strong>
+      </h1>
     </div>
-    <div class="flex flex-col text-center">
-      <h2 class="text-xl mb-4">Frameworks</h2>
-      <ul class="list-none p-0">
-        <li class="mb-2 text-lg">
-          <i class="fas fa-code-branch mr-2"></i> Git
-        </li>
-        <li class="mb-2 text-lg">
-          <i class="fab fa-laravel mr-2"></i> Laravel
-        </li>
-        <li class="mb-2 text-lg">
-          <i class="fab fa-angular mr-2"></i> Angular
-        </li>
-        <li class="mb-2 text-lg">
-          <i class="fas fa-pencil-ruler mr-2"></i> Tailwind
-        </li>
-      </ul>
-      <h2 class="text-xl mb-4">Languages</h2>
-      <ul class="list-none p-0">
-        <li class="mb-2 text-lg">🇷🇺 Russian</li>
-        <li class="mb-2 text-lg">🇺🇦 Ukrainian</li>
-        <li class="mb-2 text-lg">🇪🇸 Spanish</li>
-        <li class="mb-2 text-lg">🇬🇧 English</li>
-      </ul>
+
+    <div class="flex-grow w-full max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto mt-8"> 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> 
+        <div> 
+          <h2 class="text-2xl mb-4 font-semibold">Programming</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-html5 mr-2 text-orange-500"></i> HTML
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-css3-alt mr-2 text-blue-500"></i> CSS
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-sass mr-2 text-pink-500"></i> SCSS
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-java mr-2 text-red-500"></i> Java
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-js mr-2 text-yellow-500"></i> JavaScript
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-js-square mr-2 text-yellow-500"></i> TypeScript
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fas fa-database mr-2 text-gray-500"></i> MySQL
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-php mr-2 text-indigo-500"></i> PHP
+            </li>
+          </ul>
+
+          <h2 class="text-2xl mt-8 mb-4 font-semibold">Technologies</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fas fa-server mr-2 text-gray-700"></i> VM
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-windows mr-2 text-blue-700"></i> Windows
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-linux mr-2 text-orange-600"></i> Linux
+            </li>
+          </ul>
+        </div>
+
+        <div> 
+          <h2 class="text-2xl mb-4 font-semibold">Frameworks</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fas fa-code-branch mr-2 text-green-500"></i> Git
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-laravel mr-2 text-red-600"></i> Laravel
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-angular mr-2 text-red-700"></i> Angular
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fas fa-pencil-ruler mr-2 text-blue-600"></i> Tailwind
+            </li>
+          </ul>
+
+          <h2 class="text-2xl mt-8 mb-4 font-semibold">Languages</h2>
+          <ul class="list-none p-0">
+            <li class="mb-2 text-lg flex items-center">🇷🇺 Russian</li>
+            <li class="mb-2 text-lg flex items-center">🇺🇦 Ukrainian</li>
+            <li class="mb-2 text-lg flex items-center">🇪🇸 Spanish</li>
+            <li class="mb-2 text-lg flex items-center">🇬🇧 English</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</DualLayout>

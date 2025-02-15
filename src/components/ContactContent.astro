@@ -4,12 +4,15 @@ import DualLayout from "../layouts/DualLayout.astro";
 
 <DualLayout pageName="Contact">
   <section
-    class="flex flex-col items-center w-full h-full xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-hidden"
+    class="flex flex-col items-start w-full h-screen sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-auto"
   >
-    <h1 class="text-3xl mb-4 text-center sm:text-4xl pb-10">
-      <strong>Contact</strong>
-    </h1>
-
+    <!-- TITLE -->
+    <div class="w-full pt-10 xl:pb-10">
+      <h1 class="text-3xl xl:text-4xl mb-0 whitespace-nowrap">
+        <strong>Contact</strong>
+      </h1>
+    </div>
+    <!-- CONTENT-->
     <div class="max-w-md mx-auto mb-4">
       <p class="mb-2"><strong>Birthdate:</strong> October 31 - 1990</p>
       <p class="mb-2"><strong>Location:</strong> Spain</p>
@@ -18,56 +21,66 @@ import DualLayout from "../layouts/DualLayout.astro";
       <p class="mb-2"><strong>Phone:</strong> +34 658 440 125</p>
       <p class="mb-2"><strong>Freelancer:</strong> Available</p>
     </div>
-
+    <!--SUBCONTENT-->
     <form class="w-full max-w-md mx-auto relative">
       <div class="mb-4">
-        <label for="name" class="block  text-[var(--letter-color)] font-bold mb-2"></label>
+        <label
+          for="name"
+          class="block text-[var(--letter-color)] font-bold mb-2"></label>
         <input
           type="text"
           id="name"
           name="name"
           placeholder="Name..."
-          class="shadow appearance-none border rounded w-full py-2 px-3  text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <div class="mb-4">
-        <label for="email" class="block  text-[var(--letter-color)] font-bold mb-2"></label>
+        <label
+          for="email"
+          class="block text-[var(--letter-color)] font-bold mb-2"></label>
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Email..."
-          class="shadow appearance-none border rounded w-full py-2 px-3  text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <div class="mb-4">
-        <label for="project" class="block  text-[var(--letter-color)] font-bold mb-2"></label>
+        <label
+          for="project"
+          class="block text-[var(--letter-color)] font-bold mb-2"></label>
         <input
           type="text"
           id="project"
           name="project"
           placeholder="The project is about..."
-          class="shadow appearance-none border rounded w-full py-2 px-3  text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <div class="mb-4">
-        <label for="budget" class="block  text-[var(--letter-color)] font-bold mb-2"></label>
+        <label
+          for="budget"
+          class="block text-[var(--letter-color)] font-bold mb-2"></label>
         <input
           type="text"
           id="budget"
           name="budget"
           placeholder="Budget..."
-          class="shadow appearance-none border rounded w-full py-2 px-3  text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
       <div class="mb-6 relative">
-        <label for="message" class="block  text-[var(--letter-color)] font-bold mb-2"></label>
+        <label
+          for="message"
+          class="block text-[var(--letter-color)] font-bold mb-2"></label>
         <textarea
           id="message"
           name="message"
           rows="4"
           placeholder="Message..."
-          class="shadow appearance-none border rounded w-full py-2 px-3  text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
         ></textarea>
         <button
           type="submit"

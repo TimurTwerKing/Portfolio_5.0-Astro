@@ -3,14 +3,20 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="About Me">
-  <section class="flex flex-col items-center w-full h-full sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-hidden">
-    <h1 class="text-3xl text-center sm:text-4xl pb-10">
-      <strong>About Me</strong>
-    </h1>
+  <section
+  class="flex flex-col items-start w-full h-screen sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-auto"
+>
+    <!-- TITLE -->
+    <div class="w-full pt-10 xl:pb-10">
+      <h1 class="text-3xl xl:text-4xl mb-0 whitespace-nowrap">
+        <strong>About Me</strong>
+      </h1>
+    </div>
+    <!-- CONTENT-->
     <div
-      class="max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto leading-relaxed text-center sm:text-justify"
+      class="flex-grow flex items-center justify-center w-full max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto"
     >
-      <p>
+      <p class="leading-relaxed text-center sm:text-justify">
         I'm a web programming student with a passion for music and computers. I
         have a professional background in the automotive industry as a painter
         and bodybuilder specialist. I've developed my skills in precision,
@@ -19,10 +25,13 @@ import DualLayout from "../layouts/DualLayout.astro";
         professionals who share my enthusiasm for grow in this industry like a
         mushroom.
       </p>
-      <spam class="mt-4 text-xl font-semibold text-center">
+    </div>
+    <!--SUBCONTENT-->
+    <div class="w-full text-left pb-10">
+      <span class="text-xl font-semibold">
         Following the white rabbit, choosing the right Morpheus pill, and eating
         the Oracle cookie. (<strong>Hope you get the reference!</strong>)
-      </spam>
+      </span>
     </div>
   </section>
 </DualLayout>

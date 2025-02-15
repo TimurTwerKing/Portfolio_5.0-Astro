@@ -4,17 +4,24 @@ import DualLayout from "../layouts/DualLayout.astro";
 
 <DualLayout pageName="Resume">
   <section
-    class="flex flex-col items-start w-full h-screen sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh] p-4 box-border overflow-auto"
+    class="flex flex-col items-start w-full h-screen
+    sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh]
+    p-4 box-border overflow-auto"
   >
-    <div class="w-full pt-10 xl:pb-10">
-      <h1 class="text-3xl xl:text-4xl mb-0 whitespace-nowrap">
+    <!-- TITLE -->
+    <div class="w-full mb-5 xl:pt-10 pt-20 xl:pb-10">
+      <h1 class="text-6xl xl:text-6xl mb-0 whitespace-nowrap">
         <strong>Skills</strong>
       </h1>
     </div>
+    <!-- CONTENT-->
 
-    <div class="flex-grow w-full max-w-[90%] sm:max-w-xl lg:max-w-3xl mx-auto mt-8"> 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> 
-        <div> 
+    <div
+    class="flex-grow flex items-center justify-center w-full max-w-[90%]
+     sm:max-w-xl lg:max-w-3xl mx-auto pb-15"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
           <h2 class="text-2xl mb-4 font-semibold">Programming</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">
@@ -57,7 +64,7 @@ import DualLayout from "../layouts/DualLayout.astro";
           </ul>
         </div>
 
-        <div> 
+        <div>
           <h2 class="text-2xl mb-4 font-semibold">Frameworks</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">

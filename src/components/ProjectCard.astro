@@ -2,7 +2,8 @@
 const { title, description, image, link } = Astro.props;
 ---
 
-<a href={link} class="bg-white rounded-lg shadow-md p-4 block"> {/* Enlace a la card */}
+<a href={link} class="bg-white rounded-lg shadow-md p-4 block">
+  {/* Enlace a la card */}
   <img src={image} alt={title} class="w-full h-auto mb-2" />
   <h3 class="text-xl font-semibold mb-1">{title}</h3>
   <p>{description}</p>

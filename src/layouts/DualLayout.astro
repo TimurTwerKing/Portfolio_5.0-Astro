@@ -18,17 +18,16 @@ const { pageName } = Astro.props;
     <div class="border border-[var(--border-color)] shadow-lg">
       <div
         id="layout-container"
-        class="flex flex-col xl:flex-row items-start w-full max-h-[80vh] xl:max-h-[70vh]"
+        class="flex flex-col xl:flex-row w-full h-full"
       >
-        <!-- Índice -->
         <div
-          class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)] max-h-[80vh] overflow-hidden"
+          class="xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)] items-center justify-center overflow-y-auto"
         >
           <Index />
         </div>
-        <!-- Contenido -->
+
         <div
-          class="w-full xl:w-1/2 bg-[var(--page-background)] p-5 flex items-center justify-center overflow-y-auto max-h-[80vh]"
+          class="w-full xl:w-1/2 bg-[var(--page-background)] p-5 flex items-center justify-center overflow-y-auto"
         >
           <slot />
         </div>

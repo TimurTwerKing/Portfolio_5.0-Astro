@@ -9,79 +9,77 @@ import DualLayout from "../layouts/DualLayout.astro";
     p-4 box-border overflow-auto"
   >
     <!-- TITLE -->
-    <div class="w-full mb-5 xl:pt-10 pt-20 xl:pb-10">
-      <h1 class="text-6xl xl:text-6xl mb-0 whitespace-nowrap">
-        <strong>Skills</strong>
-      </h1>
+    <div class="w-full mb-5 pt-20 xl:pt-10 xl:pb-10">
+      <h1 class="text-6xl font-bold">Skills</h1>
     </div>
-    <!-- CONTENT-->
 
+    <!-- CONTENT -->
     <div
-    class="flex-grow flex items-center justify-center w-full max-w-[90%]
-     sm:max-w-xl lg:max-w-3xl mx-auto pb-15"
+      class="flex-grow flex items-center justify-center w-full max-w-[90%] sm:max-w-xl lg:max-w-5xl mx-auto pb-15"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
-          <h2 class="text-2xl mb-4 font-semibold">Programming</h2>
+          <h2 class="text-2xl font-semibold mb-4">Programming</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-html5 mr-2 text-orange-500"></i> HTML
+              <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-css3-alt mr-2 text-blue-500"></i> CSS
+              <i class="fab fa-css3-alt text-blue-500 mr-2"></i> CSS
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-sass mr-2 text-pink-500"></i> SCSS
+              <i class="fab fa-sass text-pink-500 mr-2"></i> SCSS
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-java mr-2 text-red-500"></i> Java
+              <i class="fab fa-java text-red-500 mr-2"></i> Java
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-js mr-2 text-yellow-500"></i> JavaScript
+              <i class="fab fa-js text-yellow-500 mr-2"></i> JavaScript
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-js-square mr-2 text-yellow-500"></i> TypeScript
+              <i class="fab fa-js-square text-yellow-500 mr-2"></i> TypeScript
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fas fa-database mr-2 text-gray-500"></i> MySQL
+              <i class="fas fa-database text-gray-500 mr-2"></i> MySQL
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-php mr-2 text-indigo-500"></i> PHP
-            </li>
-          </ul>
-
-          <h2 class="text-2xl mt-8 mb-4 font-semibold">Technologies</h2>
-          <ul class="list-none p-0">
-            <li class="mb-2 text-lg flex items-center">
-              <i class="fas fa-server mr-2 text-gray-700"></i> VM
-            </li>
-            <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-windows mr-2 text-blue-700"></i> Windows
-            </li>
-            <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-linux mr-2 text-orange-600"></i> Linux
+              <i class="fab fa-php text-indigo-500 mr-2"></i> PHP
             </li>
           </ul>
         </div>
 
         <div>
-          <h2 class="text-2xl mb-4 font-semibold">Frameworks</h2>
+          <h2 class="text-2xl font-semibold mb-4">Frameworks & Technologies</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">
-              <i class="fas fa-code-branch mr-2 text-green-500"></i> Git
+              <i class="fas fa-code-branch text-green-500 mr-2"></i> Git
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-laravel mr-2 text-red-600"></i> Laravel
+              <i class="fab fa-laravel text-red-600 mr-2"></i> Laravel
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fab fa-angular mr-2 text-red-700"></i> Angular
+              <i class="fab fa-angular text-red-700 mr-2"></i> Angular
             </li>
             <li class="mb-2 text-lg flex items-center">
-              <i class="fas fa-pencil-ruler mr-2 text-blue-600"></i> Tailwind
+              <i class="fas fa-pencil-ruler text-blue-600 mr-2"></i> Tailwind
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-galactic-republic text-purple-600 mr-2"></i> Astro
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fas fa-server text-gray-700 mr-2"></i> VM
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-windows text-blue-700 mr-2"></i> Windows
+            </li>
+            <li class="mb-2 text-lg flex items-center">
+              <i class="fab fa-linux text-orange-600 mr-2"></i> Linux
             </li>
           </ul>
+        </div>
 
-          <h2 class="text-2xl mt-8 mb-4 font-semibold">Languages</h2>
+        <div>
+          <h2 class="text-2xl font-semibold mb-4">Languages</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">🇷🇺 Russian</li>
             <li class="mb-2 text-lg flex items-center">🇺🇦 Ukrainian</li>

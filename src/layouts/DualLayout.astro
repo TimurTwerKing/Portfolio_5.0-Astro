@@ -13,15 +13,16 @@ const { pageName } = Astro.props;
   </head>
   <body
     data-page={pageName.toLowerCase()}
-    class="h-screen border border-[var(--border-color)] shadow-lg"
+    class="h-screen border border-[var(--border-color)] shadow-lg overflow-hidden"
   >
-    <div class="border border-[var(--border-color)] shadow-lg">
+    <div class="border border-[var(--border-color)] shadow-lg flex flex-col h-full">
       <div
         id="layout-container"
         class="flex flex-col xl:flex-row w-full h-full"
       >
         <div
-          class="xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)] items-center justify-center overflow-y-auto"
+          class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)] 
+          items-center justify-center overflow-y-auto"
         >
           <Index />
         </div>

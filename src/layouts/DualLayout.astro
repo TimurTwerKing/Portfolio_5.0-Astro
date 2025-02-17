@@ -11,21 +11,40 @@ const { pageName } = Astro.props;
     <link rel="stylesheet" href="/src/styles/global.css" />
     <title>{pageName}</title>
   </head>
-  <body data-page={pageName.toLowerCase()} class="min-h-screen flex flex-col">
-    <div class="flex flex-col h-full">
+
+  <body
+    data-page={pageName.toLowerCase()}
+    class="min-h-screen flex flex-col lg:pl-10 lg:pr-10 lg:pt-5 lg:pb-5"
+  >
+    <div class="flex flex-col xl:flex-row w-full h-full flex-grow">
+      <!-- SECCIÓN IZQUIERDA -->
       <div
-        id="layout-container"
-        class="flex flex-col xl:flex-row w-full h-full"
+        class="hidden xl:flex xl:w-1/2 lg:mt-15 p-5 text-[var(--letter-color)]
+              items-center justify-center"
+      >
+        <Index />
+      </div>
+
+      <!-- SECCIÓN DERECHA -->
+      <div
+        class="w-full xl:w-1/2 lg:mt-5 lg:p-5 justify-center
+              flex flex-col flex-grow"
       >
         <div
-          class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)]
-          items-center justify-center overflow-y-auto h-full"
+          class="flex justify-center w-full max-w-[90%] 
+          sm:max-w-xl text-lg lg:text-2xl mx-auto mt-5 sm:mt-0 mb-5"
         >
-          <Index />
+          <div class="w-full xl:pt-5 xl:pb-5">
+            <h1 class="text-6xl lg:text-5xl whitespace-nowrap">
+              <strong>{pageName}</strong><!-- TITLE -->
+            </h1>
+          </div>
         </div>
 
+        <!-- SLOT CONTENT -->
         <div
-          class="w-full xl:w-1/2 p-5 flex items-center justify-center overflow-y-auto h-full"
+          class="w-full flex-grow flex flex-col overflow-y-auto max-h-[75vh]
+        min-h-0 pb-35 lg:pb-0 lg:mb-5"
         >
           <slot />
         </div>

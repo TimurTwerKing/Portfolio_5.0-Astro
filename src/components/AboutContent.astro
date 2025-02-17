@@ -3,22 +3,11 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="About Me">
-  <section
-    class="flex flex-col items-start w-full h-screen
-    sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh]
-    p-4 box-border overflow-auto"
-  >
-    <!-- TITLE -->
-    <div class="w-full mb-15 xl:pt-6 xl:pb-6">
-      <h1 class="text-6xl xl:text-6xl mb-0 whitespace-nowrap">
-        <strong>About Me</strong>
-      </h1>
-    </div>
-
+  <section>
     <!-- CONTENT -->
     <div
-      class="flex-grow flex justify-center w-full max-w-[90%]
-      sm:max-w-xl text-lg lg:text-2xl mx-auto mb-4"
+      class="flex-grow flex justify-center w-full max-w-[80%]
+      sm:max-w-xl text-lg lg:text-2xl mx-auto mb-10 lg:mb-4"
     >
       <p class="leading-relaxed text-center sm:text-justify">
         I'm a web programming student with a passion for music and computers. I
@@ -32,7 +21,7 @@ import DualLayout from "../layouts/DualLayout.astro";
     </div>
 
     <!-- SUBCONTENT -->
-    <div class="flex-grow w-full text-left pb-15">
+    <div class="flex-grow w-full text-left p-5">
       <span class="text-xl font-semibold">
         Following the white rabbit, choosing the right Morpheus pill, and eating
         the Oracle cookie. (<strong>Hope you get the reference!</strong>)

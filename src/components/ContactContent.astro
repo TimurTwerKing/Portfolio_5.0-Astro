@@ -3,19 +3,9 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Contact">
-  <section
-    class="flex flex-col items-start w-full h-screen
-    sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh]
-     p-4 box-border overflow-auto"
-  >
-    <!-- TITLE -->
-    <div class="w-full mb-15 xl:pt-6 xl:pb-6">
-      <h1 class="text-6xl xl:text-6xl mb-0 whitespace-nowrap">
-        <strong>Contact</strong>
-      </h1>
-    </div>
+  <section>
     <!-- CONTENT-->
-    <div class="max-w-md mx-auto mb-4 lg:max-w-2xl">
+    <div class="max-w-md mx-auto lg:max-w-2xl">
       <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
         <div>
           <p class="mb-2"><strong>Birthdate:</strong> October 31 - 1990</p>
@@ -32,7 +22,7 @@ import DualLayout from "../layouts/DualLayout.astro";
     <!--SUBCONTENT-->
     <div
       class="flex-grow flex items-center justify-center w-full max-w-[90%]
-     sm:max-w-xl lg:max-w-3xl mx-auto pb-15"
+     sm:max-w-xl lg:max-w-3xl mx-auto"
     >
       <form class="w-full max-w-md mx-auto relative">
         <div class="mb-4">
@@ -96,22 +86,18 @@ import DualLayout from "../layouts/DualLayout.astro";
           ></textarea>
           <button
             type="submit"
-            class="absolute bottom-2 right-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="absolute bottom-2 right-2  hover:bg-[var(--total-background)]  text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
+            <img
+              src="../public/img/send-mail.png"
+              alt="Enviar correo"
               class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 15.13a2 2 0 11-3.465-2.62A48.068 48.068 0 0112 5.25c2.252 0 4.456.607 6.418 1.715a2 2 0 01-3.465 2.62L18 12m-6 0v7.5m-6 0v7.5"
-              ></path>
-            </svg>
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 15.13a2 2 0 11-3.465-2.62A48.068 48.068 0 0112 5.25c2.252 0 4.456.607 6.418 1.715a2 2 0 01-3.465 2.62L18 12m-6 0v7.5m-6 0v7.5"
+            ></path>
           </button>
         </div>
       </form>

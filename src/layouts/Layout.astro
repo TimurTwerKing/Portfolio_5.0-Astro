@@ -24,15 +24,19 @@ const { pageName } = Astro.props;
     <title>{pageName}</title>
   </head>
   <body
-    class="lg:pl-10 lg:pr-10 lg:pt-5 lg:pb-5   flex flex-col min-h-screen w-screen m-0 overflow-x-hidden justify-between
-    text-[var(--letter-color)] bg-[var(--total-background)]"
+    class="lg:pl-10 lg:pr-10 lg:pt-5 lg:pb-5 flex flex-col 
+    h-screen w-screen m-0 overflow-x-hidden
+  text-[var(--letter-color)] bg-[var(--total-background)]"
   >
     <Header />
+    
     <div
-      class="bg-[var(--page-background)] text-[var(--letter-color)] flex-1 overflow-hidden border border-[var(--border-color)] shadow-lg h-full"
+      class="flex-grow overflow-hidden bg-[var(--page-background)]
+    text-[var(--letter-color)] border border-[var(--border-color)] shadow-lg flex"
     >
       <slot />
     </div>
-    <Footer class="mt-auto" />
+
+    <Footer />
   </body>
 </html>

@@ -5,20 +5,10 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Projects">
-  <section
-    class="flex flex-col items-start w-full h-screen
-    sm:w-[90vw] sm:h-[90vh] lg:w-[85vw] lg:h-[85vh] xl:w-[80vw] xl:h-[80vh]
-     p-4 box-border overflow-auto"
-  >
-    <!-- TITLE -->
-    <div class="w-full mb-15 xl:pt-6 xl:pb-6">
-      <h1 class="text-6xl xl:text-6xl mb-0 whitespace-nowrap">
-        <strong>Projects</strong>
-      </h1>
-    </div>
-    <!-- CONTENT-->
+  <section >
+    <!-- CONTENT -->
     <div
-      class="flex-grow grid grid-cols-1 pb-15 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto text-gray-700"
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto text-gray-700 flex-grow min-h-0"
     >
       {
         projects[0].frontmatter.projects.map((project: any) => (
@@ -28,3 +18,4 @@ import DualLayout from "../layouts/DualLayout.astro";
     </div>
   </section>
 </DualLayout>
+

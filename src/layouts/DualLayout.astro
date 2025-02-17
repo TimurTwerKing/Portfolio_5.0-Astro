@@ -11,23 +11,21 @@ const { pageName } = Astro.props;
     <link rel="stylesheet" href="/src/styles/global.css" />
     <title>{pageName}</title>
   </head>
-  <body
-    data-page={pageName.toLowerCase()}
-    class="min-h-screen flex flex-col border border-[var(--border-color)] shadow-lg"  >
-    <div class="border border-[var(--border-color)] shadow-lg flex flex-col h-full">
+  <body data-page={pageName.toLowerCase()} class="min-h-screen flex flex-col">
+    <div class="flex flex-col h-full">
       <div
         id="layout-container"
         class="flex flex-col xl:flex-row w-full h-full"
       >
         <div
-          class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)] bg-[var(--page-background)] 
-          items-center justify-center overflow-y-auto"
+          class="hidden xl:flex xl:w-1/2 p-5 text-[var(--letter-color)]
+          items-center justify-center overflow-y-auto h-full"
         >
           <Index />
         </div>
 
         <div
-          class="w-full xl:w-1/2 bg-[var(--page-background)] p-5 flex items-center justify-center overflow-y-auto"
+          class="w-full xl:w-1/2 p-5 flex items-center justify-center overflow-y-auto h-full"
         >
           <slot />
         </div>

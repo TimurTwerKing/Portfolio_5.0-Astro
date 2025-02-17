@@ -3,32 +3,27 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Contact">
-  <section>
-    <!-- CONTENT-->
-    <div class="max-w-md mx-auto lg:max-w-2xl">
-      <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
-        <div>
-          <p class="mb-2"><strong>Birthdate:</strong> October 31 - 1990</p>
-          <p class="mb-2"><strong>Location:</strong> Spain</p>
-          <p class="mb-2"><strong>Address:</strong> Orihuela - Alicante</p>
+  <section class="flex flex-col items-center justify-center w-full h-screen px-4">
+    <!-- CONTENT -->
+    <div class="w-full max-w-md mx-auto lg:max-w-2xl flex flex-col items-center justify-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 w-full">
+        <div class="flex flex-col items-start justify-start">
+          <p class="mb-1"><strong>Birthdate:</strong> October 31 - 1990</p>
+          <p class="mb-1"><strong>Location:</strong> Spain</p>
+          <p class="mb-1"><strong>Address:</strong> Orihuela - Alicante</p>
         </div>
-        <div>
-          <p class="mb-2"><strong>Email:</strong> Timurnator_@outlook.com</p>
-          <p class="mb-2"><strong>Phone:</strong> +34 658 440 125</p>
-          <p class="mb-2"><strong>Freelancer:</strong> Available</p>
+        <div class="flex flex-col items-start justify-start">
+          <p class="mb-1"><strong>Email:</strong> Timurnator_@outlook.com</p>
+          <p class="mb-1"><strong>Phone:</strong> +34 658 440 125</p>
+          <p class="mb-1"><strong>Freelancer:</strong> Available</p>
         </div>
       </div>
     </div>
-    <!--SUBCONTENT-->
-    <div
-      class="flex-grow flex items-center justify-center w-full max-w-[90%]
-     sm:max-w-xl lg:max-w-3xl mx-auto"
-    >
+
+    <!-- SUBCONTENT -->
+    <div class="flex-grow flex items-center justify-center w-full py-6">
       <form class="w-full max-w-md mx-auto relative">
-        <div class="mb-4">
-          <label
-            for="name"
-            class="block text-[var(--letter-color)] font-bold mb-2"></label>
+        <div class="mb-3">
           <input
             type="text"
             id="name"
@@ -37,10 +32,7 @@ import DualLayout from "../layouts/DualLayout.astro";
             class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-4">
-          <label
-            for="email"
-            class="block text-[var(--letter-color)] font-bold mb-2"></label>
+        <div class="mb-3">
           <input
             type="email"
             id="email"
@@ -49,10 +41,7 @@ import DualLayout from "../layouts/DualLayout.astro";
             class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-4">
-          <label
-            for="project"
-            class="block text-[var(--letter-color)] font-bold mb-2"></label>
+        <div class="mb-3">
           <input
             type="text"
             id="project"
@@ -61,10 +50,7 @@ import DualLayout from "../layouts/DualLayout.astro";
             class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-4">
-          <label
-            for="budget"
-            class="block text-[var(--letter-color)] font-bold mb-2"></label>
+        <div class="mb-3">
           <input
             type="text"
             id="budget"
@@ -73,10 +59,7 @@ import DualLayout from "../layouts/DualLayout.astro";
             class="shadow appearance-none border rounded w-full py-2 px-3 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-6 relative">
-          <label
-            for="message"
-            class="block text-[var(--letter-color)] font-bold mb-2"></label>
+        <div class="relative">
           <textarea
             id="message"
             name="message"
@@ -86,18 +69,13 @@ import DualLayout from "../layouts/DualLayout.astro";
           ></textarea>
           <button
             type="submit"
-            class="absolute bottom-2 right-2  hover:bg-[var(--total-background)]  text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer"
+            class="absolute bottom-2 right-2 hover:bg-[var(--total-background)] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer"
           >
             <img
               src="../public/img/send-mail.png"
               alt="Enviar correo"
               class="w-6 h-6"
             />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 12L3.269 15.13a2 2 0 11-3.465-2.62A48.068 48.068 0 0112 5.25c2.252 0 4.456.607 6.418 1.715a2 2 0 01-3.465 2.62L18 12m-6 0v7.5m-6 0v7.5"
-            ></path>
           </button>
         </div>
       </form>

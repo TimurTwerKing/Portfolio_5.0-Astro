@@ -13,8 +13,7 @@ const { pageName } = Astro.props;
   </head>
   <body
     data-page={pageName.toLowerCase()}
-    class="h-screen border border-[var(--border-color)] shadow-lg overflow-hidden"
-  >
+    class="min-h-screen flex flex-col border border-[var(--border-color)] shadow-lg"  >
     <div class="border border-[var(--border-color)] shadow-lg flex flex-col h-full">
       <div
         id="layout-container"

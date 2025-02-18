@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   const themeButton = document.getElementById("theme-toggle");
   const root = document.documentElement;
 
@@ -17,21 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
     root.classList.add(themes[currentThemeIndex]);
     localStorage.setItem("theme", themes[currentThemeIndex]);
   });
-
-  function adjustLayout() {
-    const layout = document.getElementById("layout-container");
-    if (!layout) return;
-
-    const isIndex = document.body.dataset.page === "index";
-
-    if (isIndex) {
-      layout.classList.remove("xl:flex-row");
-      layout.classList.add("items-center", "justify-center");
-    } else {
-      layout.classList.add("xl:flex-row");
-      layout.classList.remove("items-center", "justify-center");
-    }
-  }
-
-  adjustLayout();
 });

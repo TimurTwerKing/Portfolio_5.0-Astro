@@ -21,6 +21,7 @@ const { pageName } = Astro.props;
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/global.css" />
+    <script src="/js/theme-toggle.js" defer></script>
     <title>{pageName}</title>
   </head>
   <body
@@ -37,7 +38,7 @@ const { pageName } = Astro.props;
     >
       <slot />
     </div>
-
+    
     <Footer />
   </body>
 </html>

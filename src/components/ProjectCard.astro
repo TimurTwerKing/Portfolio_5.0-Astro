@@ -2,8 +2,16 @@
 const { title, description, image, link } = Astro.props;
 ---
 
-<a href={link} class="bg-[var(--total-background)] rounded-lg shadow-md p-4 block">
-  <img src={image} alt={title} class="w-full h-auto mb-2" />
-  <h3 class="text-xl font-semibold mb-1">{title}</h3>
-  <p>{description}</p>
+<a
+  href={link}
+  class="bg-[var(--total-background)] rounded-lg shadow-md p-4 flex-col items-center"
+>
+  <div class="w-full h-48 flex items-center justify-center overflow-hidden">
+    <img src={image} alt={title} class="max-w-full max-h-full object-contain" />
+  </div>
+
+  <div class="w-full h-32 text-center mt-2 flex flex-col justify-center">
+    <h3 class="text-xl font-semibold mb-1">{title}</h3>
+    <p class="overflow-hidden text-ellipsis">{description}</p>
+  </div>
 </a>

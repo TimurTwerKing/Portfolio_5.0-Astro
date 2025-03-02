@@ -5,17 +5,16 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Projects">
-  <section >
+  <section>
     <!-- CONTENT -->
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto text-gray-700 flex-grow min-h-0"
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto text-gray-700 flex-grow min-h-0 p-4"
     >
       {
-        projects[0].frontmatter.projects.map((project:any) => (
+        projects[0].frontmatter.projects.map((project: any) => (
           <ProjectCard {...project} />
         ))
       }
     </div>
   </section>
 </DualLayout>
-

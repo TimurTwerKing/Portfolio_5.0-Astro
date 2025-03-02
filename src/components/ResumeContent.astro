@@ -3,13 +3,12 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Resume">
-  <section >
+  <section>
     <!-- CONTENT -->
-    <div
-      class="flex-grow flex items-center justify-center w-full max-w-[90%] sm:max-w-xl lg:max-w-5xl mx-auto"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div>
+    <div class="flex-grow flex items-center justify-center w-full max-w-[90%] sm:max-w-xl lg:max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <!-- Primera columna -->
+        <div class="flex flex-col items-center justify-start mb-6 lg:items-start lg:mb-0">
           <h2 class="text-2xl font-semibold mb-4">Programming</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">
@@ -39,7 +38,8 @@ import DualLayout from "../layouts/DualLayout.astro";
           </ul>
         </div>
 
-        <div>
+        <!-- Segunda columna -->
+        <div class="flex flex-col items-center justify-start mb-6 lg:items-start lg:mb-0">
           <h2 class="text-2xl font-semibold mb-4">Frameworks & Technologies</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">
@@ -69,7 +69,8 @@ import DualLayout from "../layouts/DualLayout.astro";
           </ul>
         </div>
 
-        <div>
+        <!-- Tercera columna -->
+        <div class="flex flex-col items-center justify-start mb-6 lg:items-start lg:mb-0">
           <h2 class="text-2xl font-semibold mb-4">Languages</h2>
           <ul class="list-none p-0">
             <li class="mb-2 text-lg flex items-center">🇷🇺 Russian</li>

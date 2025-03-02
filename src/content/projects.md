@@ -22,37 +22,37 @@ projects:
 
   - title: "Tienda online con Vue.js"
     description: "Proyecto de e-commerce desarrollado con el framework Vue.js"
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+    image: "https://cdn-icons-png.flaticon.com/512/891/891462.png"
     link: "https://github.com/TimurTwerKing/vue_tienda_online"
-
+  
   - title: "Aplicacion de tareas con React"
     description: "Aplicación sencilla para gestionar tareas, construida con React."
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+    image: "https://cdn-icons-png.flaticon.com/512/3771/3771331.png"
     link: "https://github.com/TimurTwerKing/react_tasks_app"
-
+  
   - title: "Web con Laravel y Vue.js"
     description: "Sitio web desarrollado con el framework Laravel en el backend y Vue.js en el frontend."
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
+    image: "https://cdn-icons-png.flaticon.com/512/919/919850.png"
     link: "https://github.com/TimurTwerKing/laravel_vue_app"
-
+  
   - title: "Web personal con Angular"
     description: "Página web personal desarrollada con el framework Angular."
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
+    image: "https://cdn-icons-png.flaticon.com/512/732/732212.png"
     link: "https://github.com/TimurTwerKing/angular_web_personal"
-
+  
   - title: "Pagina de productos con React"
     description: "Sitio web de comercio electrónico con un listado de productos usando React."
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+    image: "https://cdn-icons-png.flaticon.com/512/263/263142.png"
     link: "https://github.com/TimurTwerKing/react_products_app"
-
+  
   - title: "Piedra, papel o tijera"
     description: "Clásico juego de piedra, papel o tijera para jugar contra la computadora. Desarrollado con JavaScript."
-    image: "https://cdn-icons-png.flaticon.com/512/3553/3553337.png"
+    image: "https://cdn-icons-png.flaticon.com/512/3050/3050525.png"
     link: "https://github.com/TimurTwerKing/PiedraPapelOTijera"
-
+  
   - title: "InventarioPlantas"
-    description: "Aplicación web para gestionar el inventario de plantas, probablemente con funcionalidades de registro, búsqueda y visualización. Desarrollado con [Tecnología a determinar]."
-    image: "https://static.thenounproject.com/png/4508998-200.png"
+    description: "Aplicación web para gestionar el inventario de plantas, probablemente con funcionalidades de registro, búsqueda y visualización.  Desarrollado con [Tecnología a determinar]."
+    image: "https://cdn-icons-png.flaticon.com/512/2909/2909767.png"
     link: "https://github.com/TimurTwerKing/InventarioPlantas"
 
   

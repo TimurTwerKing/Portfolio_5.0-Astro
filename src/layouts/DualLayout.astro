@@ -9,7 +9,7 @@ const { pageName } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      (function() {
+      (function () {
         try {
           var themes = ["variant-1", "variant-2", "variant-3"];
           var savedTheme = localStorage.getItem("theme");
@@ -18,7 +18,7 @@ const { pageName } = Astro.props;
           } else {
             document.documentElement.classList.add("variant-1");
           }
-        } catch(e){}
+        } catch (e) {}
       })();
     </script>
     <script src="/js/theme-init.js" is:inline></script>
@@ -26,43 +26,38 @@ const { pageName } = Astro.props;
     <script src="/js/theme-toggle.js" defer></script>
   </head>
 
-  <body
-    data-page={pageName.toLowerCase()}
-    class="min-h-screen flex flex-col"
-  >
+  <body data-page={pageName.toLowerCase()} class="min-h-screen flex flex-col">
     <div class="flex flex-col md:flex-row xl:flex-row w-full h-full flex-grow">
+
       <!-- SECCIÓN IZQUIERDA -->
       <div
-        class="hidden md:flex md:w-1/2 xl:flex xl:w-1/2 text-[var(--letter-color)]
-              items-center justify-center"
+        class="hidden md:flex md:w-1/2 xl:flex xl:w-1/2 text-[var(--letter-color)] items-center justify-center 
+        p-0 sm:p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20"
       >
         <Index />
       </div>
 
       <!-- SECCIÓN DERECHA -->
-      <div
-        class="w-full md:w-1/2 xl:w-1/2 justify-center flex flex-col flex-grow "
-      >
-      <div
-      class="flex justify-center w-full text-lg md:text-xl lg:text-2xl mx-auto mt-5 sm:mt-0 mb-5"
-    >
-    
-          <div class="w-full md:pt-3 md:pb-10 xl:pt-5 xl:pb-5 tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap">
+      <div class="w-full sm:w-1/2 justify-center flex flex-col flex-grow 
+      p-0 sm:p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20">
+        <div
+          class="flex justify-center w-full text-lg md:text-xl lg:text-2xl mx-auto mt-5 sm:mt-0 mb-5"
+        >
+          <div
+            class="w-full md:pt-3 md:pb-10 xl:pt-5 xl:pb-5 tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap"
+          >
             <h1 class="text-6xl md:text-5xl lg:text-5xl whitespace-nowrap">
-              <strong>{pageName}</strong><!-- TITLE -->
+              <strong>{pageName}</strong>
             </h1>
           </div>
         </div>
-
         <!-- SLOT CONTENT -->
         <div
-          class="w-full flex-grow flex flex-col overflow-y-auto max-h-[75vh] md:max-h-[65vh] min-h-0"
+          class="w-full flex-grow flex flex-col overflow-y-auto min-h-0"
         >
           <slot />
         </div>
       </div>
     </div>
-
-    
   </body>
 </html>

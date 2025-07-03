@@ -3,12 +3,12 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Contact">
-  <section class="flex flex-col items-center justify-center w-full min-h-screen">
+  <section class="flex flex-col items-center justify-center w-full h-full">
     <!-- CONTENT -->
-    <div class="flex justify-center w-full mb-[2rem] sm:mb-[2.5rem] md:mb-[3rem] lg:mb-[3.5rem] xl:mb-[4rem] 2xl:mb-[5rem]">
+    <div class="flex justify-center w-full sm:mb-[2rem] md:mb-[2.5rem] lg:mb-[3rem] xl:mb-[3.5rem] 2xl:mb-[4rem]">
       <div class="w-full flex flex-col">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1.5rem] w-full">
-          <div class="flex flex-col items-start justify-start mb-[1.5rem] lg:mb-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-[1.5rem] w-full">
+          <div class="flex flex-col items-start justify-start sm:mb-[1.5rem] lg:mb-0">
             <p class="mb-[0.5rem]"><strong>Birthdate:</strong> October 31 - 1990</p>
             <p class="mb-[0.5rem]"><strong>Location:</strong> Spain</p>
             <p class="mb-[0.5rem]"><strong>Address:</strong> Orihuela - Alicante</p>
@@ -24,7 +24,7 @@ import DualLayout from "../layouts/DualLayout.astro";
     
 
     <!-- SUBCONTENT -->
-    <div class="flex-grow flex items-center justify-center w-full py-[1.5rem] sm:py-[2rem]">
+    <div class="flex-grow flex items-center justify-center w-full sm:py-[1.5rem] md:py-[2rem]">
       <form class="w-full max-w-[22rem] sm:max-w-[28rem] mx-auto relative">
         <div class="mb-[1rem]">
           <input

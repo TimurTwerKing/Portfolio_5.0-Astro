@@ -1,83 +1,25 @@
 <!-- Main Hero Section -->
-<section
-  class="flex flex-col items-center justify-center w-full min-h-screen"
->
-  <!-- Main Title Section -->
-  <header class="w-full text-center">
-    <h1
-      class="
-        /* Layout */
-        font-bold whitespace-nowrap
-        
-        /* Typography - Responsive Font Sizes */
-        text-[1.5rem]
-        sm:text-[1.7rem]
-        md:text-[1.9rem]
-        lg:text-[2.1rem]
-        xl:text-[2.3rem]
-        2xl:text-[2.8rem]
-        
-        /* Spacing - Bottom Margin */
-        mb-[1.5rem]
-        sm:mb-[2rem]
-        md:mb-[2.5rem]
-        lg:mb-[3rem]
-        xl:mb-[3.5rem]
-        2xl:mb-[4rem]
-      "
-    >
+<section class="flex flex-col justify-between w-full h-full min-h-0">
+  <!-- Título principal -->
+  <header class="pt-4 pb-2">
+    <h1 class="text-center text-6xl md:text-5xl lg:text-5xl font-bold tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap">
       <strong>SOFTWARE SOLUTIONS</strong>
     </h1>
   </header>
 
-  <!-- Hero Image Section -->
-  <main class="w-full flex flex-col justify-center items-center">
-    <div class="flex justify-center w-full">
-      <img
-        id="theme-toggle"
-        src="/img/gopnik.png"
-        alt="Hero Image - Software Solutions"
-        class="
-          /* Layout */
-          w-full h-auto cursor-pointer
-          
-          /* Responsive Max Width */
-          max-w-[18rem]
-          sm:max-w-[20rem]
-          md:max-w-[22rem]
-          lg:max-w-[24rem]
-          xl:max-w-[26rem]
-          2xl:max-w-[30rem]
-        "
-      />
-    </div>
+  <!-- Imagen centrada y escalable -->
+  <main class="flex flex-col justify-center items-center flex-grow min-h-0">
+    <img
+      id="theme-toggle"
+      src="/img/gopnik.png"
+      alt="Hero Image - Software Solutions"
+      class="w-full h-auto max-w-[16rem] sm:max-w-[20rem] md:max-w-[22rem] lg:max-w-[24rem] xl:max-w-[26rem] 2xl:max-w-[30rem] max-h-[40vh] sm:max-h-[50vh] md:max-h-[60vh] object-contain"
+    />
   </main>
 
-  <!-- Subtitle Section -->
-  <footer class="w-full text-center">
-    <h2
-      class="
-        /* Typography */
-        font-semibold
-        
-        /* Responsive Font Sizes */
-        text-[1.125rem]
-        sm:text-[1.25rem]
-        md:text-[1.375rem]
-        lg:text-[1.5rem]
-        xl:text-[1.625rem]
-        2xl:text-[1.75rem]
-        
-        /* Spacing - Top Margin */
-        mt-[2rem]
-        sm:mt-[2.5rem]
-        md:mt-[3rem]
-        lg:mt-[3.5rem]
-        xl:mt-[4rem]
-        2xl:mt-[5rem]
-      "
-    >
+  <!-- Subtítulo siempre visible abajo -->
+  <footer class="px-4 pb-4">
+    <h2 class="text-left font-semibold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.625rem] 2xl:text-[1.75rem] tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap">
       tasteless...
     </h2>
   </footer>
-</section>

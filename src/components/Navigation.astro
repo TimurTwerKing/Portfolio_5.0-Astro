@@ -1,3 +1,6 @@
+---
+const currentPath = Astro.url.pathname;
+---
 <div class="w-full">
   <nav
     class="
@@ -13,15 +16,10 @@
     <!-- ABOUT -->
     <a
       href="/about"
-      class="
-        flex flex-col items-center justify-center text-center
-        h-full flex-1
-        text-[var(--letter-color)] border-r border-[var(--border-color)]
-        text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem]
-        gap-2 p-3
-        transition-all duration-300 ease-in-out
-        hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]
-      "
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/about" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
+      ].join(" ")}
     >
       <img 
         src="/img/about.png" 
@@ -41,15 +39,10 @@
     <!-- RESUME -->
     <a
       href="/resume"
-      class="
-        flex flex-col items-center justify-center text-center
-        h-full flex-1
-        text-[var(--letter-color)] border-r border-[var(--border-color)]
-        text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem]
-        gap-2 p-3
-        transition-all duration-300 ease-in-out
-        hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]
-      "
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/resume" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
+      ].join(" ")}
     >
       <img 
         src="/img/resume.png" 
@@ -69,15 +62,10 @@
     <!-- PROJECTS -->
     <a
       href="/projects"
-      class="
-        flex flex-col items-center justify-center text-center
-        h-full flex-1
-        text-[var(--letter-color)] border-r border-[var(--border-color)]
-        text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem]
-        gap-2 p-3
-        transition-all duration-300 ease-in-out
-        hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]
-      "
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/projects" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
+      ].join(" ")}
     >
       <img 
         src="/img/projects.png" 
@@ -97,15 +85,10 @@
     <!-- CONTACT -->
     <a
       href="/contact"
-      class="
-        flex flex-col items-center justify-center text-center
-        h-full flex-1
-        text-[var(--letter-color)]
-        text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem]
-        gap-2 p-3
-        transition-all duration-300 ease-in-out
-        hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]
-      "
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/contact" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
+      ].join(" ")}
     >
       <img 
         src="/img/contact.png" 

@@ -5,10 +5,10 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Projects">
-  <section>
+  <section class="w-full">
     <!-- CONTENT -->
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto text-gray-700 flex-grow min-h-0 p-4"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] w-full text-gray-700 flex-grow min-h-0"
     >
       {
         projects[0].frontmatter.projects.map((project: any) => (

@@ -4,14 +4,14 @@ const { title, description, image, link } = Astro.props;
 
 <a
   href={link}
-  class="bg-[var(--total-background)] rounded-lg shadow-md p-4 flex-col items-center"
+  class="bg-[var(--total-background)] rounded-lg shadow-md p-3 sm:p-4 flex flex-col items-center transition-all duration-200 hover:scale-[1.03]"
 >
-  <div class="w-full h-48 flex items-center justify-center overflow-hidden">
+  <div class="w-full h-40 sm:h-48 flex items-center justify-center overflow-hidden">
     <img src={image} alt={title} class="max-w-full max-h-full object-contain" />
   </div>
 
-  <div class="w-full h-32 text-center mt-2 flex flex-col justify-center">
-    <h3 class="text-xl font-semibold mb-1">{title}</h3>
-    <p class="overflow-hidden text-ellipsis">{description}</p>
+  <div class="w-full h-28 sm:h-32 text-center mt-2 flex flex-col justify-center">
+    <h3 class="text-lg sm:text-xl font-semibold mb-1">{title}</h3>
+    <p class="overflow-hidden text-ellipsis text-sm sm:text-base">{description}</p>
   </div>
 </a>

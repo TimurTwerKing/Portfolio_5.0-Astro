@@ -4,9 +4,11 @@ import Navigation from "./Navigation.astro";
 ---
 
 <header
-  class="w-full xs:fixed z-50 xl:h-40 xl:flex xl:items-center xl:justify-between
-  xl:gap-8 xl:-mt-25"
+  class="w-full flex flex-col items-center justify-center sm:flex-row sm:justify-between
+  sm:gap-[1rem] md:gap-[5rem] lg:gap-[10rem] xl:gap-[20rem] 2xl:gap-[50rem]
+  sm:p-[2rem] md:p-[2.5rem] lg:p-[3rem] xl:p-[3.5rem] 2xl:p-[4rem]
+  p-0 m-0"
 >
-  <Name />
-  <Navigation />
+  <Name class="w-full lg:w-[35%] xl:w-[30%] 2xl:w-[25%]" />
+  <Navigation class="w-full lg:w-[35%] xl:w-[30%] 2xl:w-[25%]" />
 </header>

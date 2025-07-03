@@ -10,9 +10,10 @@ const { pageName } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -20,38 +21,41 @@ const { pageName } = Astro.props;
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <script>
-      (function() {
+      (function () {
         try {
-          var themes = ["variant-1", "variant-2", "variant-3"];
-          var savedTheme = localStorage.getItem("theme");
-          if (savedTheme && themes.includes(savedTheme)) {
-            document.documentElement.classList.add(savedTheme);
-          } else {
-            document.documentElement.classList.add("variant-1");
-          }
-        } catch(e){}
+          const themes = ["variant-1", "variant-2", "variant-3"];
+          const savedTheme = localStorage.getItem("theme") || "";
+          document.documentElement.classList.add(
+            themes.includes(savedTheme) ? savedTheme : "variant-1",
+          );
+        } catch (e) {}
       })();
     </script>
+
     <script src="/js/theme-init.js" is:inline></script>
     <script src="/js/theme-toggle.js" defer></script>
+
     <title>{pageName}</title>
   </head>
-  <body
-    class="lg:pl-10 lg:pr-10 lg:pt-5 lg:pb-5 flex flex-col
-    h-screen w-screen m-0 overflow-x-hidden
-    text-[var(--letter-color)] bg-[var(--total-background)]"
-  >
-    <Header />
 
-    <div
-      class="flex-grow overflow-hidden bg-[var(--page-background)]
-      text-[var(--letter-color)] border border-[var(--border-color)]
-      shadow-lg flex flex-col justify-center items-center"
-    >
-      <slot />
-    </div>
-    
-    <Footer />
+  <body class="min-h-screen w-full bg-[var(--total-background)] text-[var(--letter-color)] relative overflow-hidden">
+    <!-- Header overlay arriba -->
+    <header class="absolute top-0 left-0 w-full z-20 pointer-events-auto">
+      <Header />
+    </header>
+
+    <!-- Main centrado y expandido -->
+    <main class="absolute inset-0 flex items-center justify-center z-10 sm:px-[6rem] sm:py-[6rem]">
+      <div class="w-full h-full max-w-full max-h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow flex items-center justify-center overflow-auto">
+        <slot />
+      </div>
+    </main>
+
+    <!-- Footer overlay abajo -->
+    <footer class="absolute bottom-0 left-0 w-full z-20 pointer-events-auto">
+      <Footer />
+    </footer>
   </body>
 </html>

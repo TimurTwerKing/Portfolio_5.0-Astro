@@ -30,31 +30,34 @@ const { pageName } = Astro.props;
     data-page={pageName.toLowerCase()}
     class="min-h-screen flex flex-col bg-[var(--total-background)] text-[var(--letter-color)]"
   >
-    <main class="flex flex-col lg:flex-row w-full h-screen">
+    <main class="flex flex-col laptop:flex-row w-full h-screen">
+
       <!-- SECCIÓN IZQUIERDA - Index Content -->
       <div
-        class="hidden lg:flex lg:w-1/2 items-center justify-center
-        p-8 lg:p-12 xl:p-16 2xl:p-20
-        mt-[10rem]"
+        class="hidden laptop:flex laptop:w-1/2 items-center justify-center
+        p-6 mobile:p-8 tablet:p-10 laptop:p-12 fhd:p-16 qhd:p-20 uhd:p-24
+        mt-[10rem] mobile:mt-[8rem] tablet:mt-[6rem] laptop:mt-[4rem]"
       >
         <Index />
       </div>
 
       <!-- SECCIÓN DERECHA - Page Content -->
       <div
-        class="w-full lg:w-1/2 flex flex-col h-full
-      p-8 lg:p-12 xl:p-16 2xl:p-20
-      mt-[10rem]"
+        class="w-full laptop:w-1/2 flex flex-col h-full
+        p-6 mobile:p-8 tablet:p-10 laptop:p-12 fhd:p-16 qhd:p-20 uhd:p-24
+        mt-[10rem] mobile:mt-[8rem] tablet:mt-[6rem] laptop:mt-[4rem]"
       >
         <!-- Page Title -->
         <div class="flex items-end justify-start">
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap"
+            class="text-3xl mobile:text-4xl tablet:text-5xl laptop:text-6xl fhd:text-7xl qhd:text-8xl uhd:text-9xl font-bold 
+            tracking-[0.2rem] mobile:tracking-[0.3rem] tablet:tracking-[0.4rem] laptop:tracking-[0.5rem] fhd:tracking-[0.6rem] qhd:tracking-[0.8rem] uhd:tracking-[1rem] 
+            whitespace-nowrap"
           >
             <strong>{pageName}</strong>
           </h1>
         </div>
-
+        
         <!-- Content Area -->
         <div class="flex-grow flex flex-col overflow-hidden">
           <slot />

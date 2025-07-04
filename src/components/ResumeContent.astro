@@ -3,80 +3,80 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Resume">
-  <section class="grid grid-rows-[auto_1fr_auto] gap-8 w-full h-full flex-grow">
+  <section class="grid grid-rows-[auto_1fr_auto] gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 fhd:gap-12 qhd:gap-16 uhd:gap-20 w-full h-full flex-grow">
     <!-- CONTENT -->
-    <div class="flex items-end justify-center pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+    <div class="flex items-end justify-center pt-4 mobile:pt-6 tablet:pt-8 laptop:pt-10">
+      <div class="grid grid-cols-1 mobile:grid-cols-2 laptop:grid-cols-2 fhd:grid-cols-3 gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 w-full max-w-6xl">
         <!-- Primera columna -->
-        <div class="flex flex-col items-center justify-start lg:items-start">
-          <h2 class="text-xl sm:text-2xl font-semibold mb-6">Programming</h2>
-          <ul class="list-none p-0 space-y-3">
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-html5 text-orange-500 mr-3"></i> HTML
+        <div class="flex flex-col items-center justify-start fhd:items-start">
+          <h2 class="text-lg mobile:text-xl tablet:text-2xl laptop:text-3xl fhd:text-4xl qhd:text-5xl uhd:text-6xl font-semibold mb-4 mobile:mb-5 tablet:mb-6">Programming</h2>
+          <ul class="list-none p-0 space-y-2 mobile:space-y-3 tablet:space-y-4">
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-html5 text-orange-500 mr-2 mobile:mr-3 tablet:mr-4"></i> HTML
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-css3-alt text-blue-500 mr-3"></i> CSS
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-css3-alt text-blue-500 mr-2 mobile:mr-3 tablet:mr-4"></i> CSS
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-sass text-pink-500 mr-3"></i> SCSS
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-sass text-pink-500 mr-2 mobile:mr-3 tablet:mr-4"></i> SCSS
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-java text-red-500 mr-3"></i> Java
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-java text-red-500 mr-2 mobile:mr-3 tablet:mr-4"></i> Java
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-js text-yellow-500 mr-3"></i> JavaScript
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-js text-yellow-500 mr-2 mobile:mr-3 tablet:mr-4"></i> JavaScript
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-js-square text-yellow-500 mr-3"></i> TypeScript
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-js-square text-yellow-500 mr-2 mobile:mr-3 tablet:mr-4"></i> TypeScript
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fas fa-database text-gray-500 mr-3"></i> MySQL
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fas fa-database text-gray-500 mr-2 mobile:mr-3 tablet:mr-4"></i> MySQL
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-php text-indigo-500 mr-3"></i> PHP
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-php text-indigo-500 mr-2 mobile:mr-3 tablet:mr-4"></i> PHP
             </li>
           </ul>
         </div>
 
         <!-- Segunda columna -->
-        <div class="flex flex-col items-center justify-start lg:items-start">
-          <h2 class="text-xl sm:text-2xl font-semibold mb-6">Frameworks & Technologies</h2>
-          <ul class="list-none p-0 space-y-3">
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fas fa-code-branch text-green-500 mr-3"></i> Git
+        <div class="flex flex-col items-center justify-start fhd:items-start">
+          <h2 class="text-lg mobile:text-xl tablet:text-2xl laptop:text-3xl fhd:text-4xl qhd:text-5xl uhd:text-6xl font-semibold mb-4 mobile:mb-5 tablet:mb-6">Frameworks & Technologies</h2>
+          <ul class="list-none p-0 space-y-2 mobile:space-y-3 tablet:space-y-4">
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fas fa-code-branch text-green-500 mr-2 mobile:mr-3 tablet:mr-4"></i> Git
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-laravel text-red-600 mr-3"></i> Laravel
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-laravel text-red-600 mr-2 mobile:mr-3 tablet:mr-4"></i> Laravel
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-angular text-red-700 mr-3"></i> Angular
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-angular text-red-700 mr-2 mobile:mr-3 tablet:mr-4"></i> Angular
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fas fa-pencil-ruler text-blue-600 mr-3"></i> Tailwind
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fas fa-pencil-ruler text-blue-600 mr-2 mobile:mr-3 tablet:mr-4"></i> Tailwind
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-galactic-republic text-purple-600 mr-3"></i> Astro
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-galactic-republic text-purple-600 mr-2 mobile:mr-3 tablet:mr-4"></i> Astro
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fas fa-server text-gray-700 mr-3"></i> VM
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fas fa-server text-gray-700 mr-2 mobile:mr-3 tablet:mr-4"></i> VM
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-windows text-blue-700 mr-3"></i> Windows
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-windows text-blue-700 mr-2 mobile:mr-3 tablet:mr-4"></i> Windows
             </li>
-            <li class="text-base sm:text-lg flex items-center">
-              <i class="fab fa-linux text-orange-600 mr-3"></i> Linux
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">
+              <i class="fab fa-linux text-orange-600 mr-2 mobile:mr-3 tablet:mr-4"></i> Linux
             </li>
           </ul>
         </div>
 
         <!-- Tercera columna -->
-        <div class="flex flex-col items-center justify-start lg:items-start">
-          <h2 class="text-xl sm:text-2xl font-semibold mb-6">Languages</h2>
-          <ul class="list-none p-0 space-y-3">
-            <li class="text-base sm:text-lg flex items-center">🇷🇺 Russian</li>
-            <li class="text-base sm:text-lg flex items-center">🇺🇦 Ukrainian</li>
-            <li class="text-base sm:text-lg flex items-center">🇪🇸 Spanish</li>
-            <li class="text-base sm:text-lg flex items-center">🇬🇧 English</li>
+        <div class="flex flex-col items-center justify-start fhd:items-start">
+          <h2 class="text-lg mobile:text-xl tablet:text-2xl laptop:text-3xl fhd:text-4xl qhd:text-5xl uhd:text-6xl font-semibold mb-4 mobile:mb-5 tablet:mb-6">Languages</h2>
+          <ul class="list-none p-0 space-y-2 mobile:space-y-3 tablet:space-y-4">
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">🇷🇺 Russian</li>
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">🇺🇦 Ukrainian</li>
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">🇪🇸 Spanish</li>
+            <li class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl flex items-center">🇬🇧 English</li>
           </ul>
         </div>
       </div>
@@ -86,6 +86,6 @@ import DualLayout from "../layouts/DualLayout.astro";
     <div></div>
 
     <!-- EMPTY SPACE -->
-    <div class="pb-8"></div>
+    <div class="pb-4 mobile:pb-6 tablet:pb-8 laptop:pb-10"></div>
   </section>
 </DualLayout>

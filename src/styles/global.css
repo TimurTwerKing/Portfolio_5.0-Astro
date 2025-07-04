@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-mobile: 30rem;    /* 480px: */
+  --breakpoint-tablet: 48rem;       /* 768px */
+  --breakpoint-laptop: 80rem;       /* 1280px */
+  --breakpoint-desktop: 100rem;     /* 1600px */
+  --breakpoint-fhd: 120rem;         /* 1920px */
+  --breakpoint-qhd: 160rem;         /* 2560px */
+  --breakpoint-uhd: 240rem;         /* 3840px */
+}
+
 /* Variante 1 */
 :root {
   --component-background: #dafdba;

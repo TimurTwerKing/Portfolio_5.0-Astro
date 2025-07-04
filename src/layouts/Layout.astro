@@ -2,12 +2,11 @@
 import "../styles/global.css";
 import Header from "../components/HeaderContent.astro";
 import Footer from "../components/FooterContent.astro";
-
-const { pageName } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,11 +24,13 @@ const { pageName } = Astro.props;
     <script>
       (function () {
         try {
-          const themes = ["variant-1", "variant-2", "variant-3"];
-          const savedTheme = localStorage.getItem("theme") || "";
-          document.documentElement.classList.add(
-            themes.includes(savedTheme) ? savedTheme : "variant-1",
-          );
+          var themes = ["variant-1", "variant-2", "variant-3"];
+          var savedTheme = localStorage.getItem("theme");
+          if (savedTheme && themes.includes(savedTheme)) {
+            document.documentElement.classList.add(savedTheme);
+          } else {
+            document.documentElement.classList.add("variant-1");
+          }
         } catch (e) {}
       })();
     </script>
@@ -42,7 +43,7 @@ const { pageName } = Astro.props;
       rel="stylesheet"
     />
 
-    <title>{pageName}</title>
+    <title>{title}</title>
   </head>
 
   <body
@@ -53,11 +54,12 @@ const { pageName } = Astro.props;
     </header>
 
     <main
-      class="absolute inset-0 flex items-center justify-center z-10 sm:p-[6rem]"
+      class="absolute inset-0 flex items-center justify-center z-10 
+        mobile:p-60 tablet:p-8 laptop:p-12 fhd:p-16 qhd:p-20 uhd:p-24"
     >
       <div
         class="w-full h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow flex items-center justify-center overflow-auto
-         sm:pt-[0rem] sm:pb-[0rem] pt-[10rem] pb-[10rem]"
+          pt-[10rem] pb-[10rem] mobile:pt-[8rem] mobile:pb-[8rem] tablet:pt-[6rem] tablet:pb-[6rem]"
       >
         <slot />
       </div>

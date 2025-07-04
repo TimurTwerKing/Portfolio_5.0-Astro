@@ -4,11 +4,11 @@ import Navigation from "./Navigation.astro";
 ---
 
 <header
-  class="w-full flex flex-col items-center justify-center sm:flex-row sm:justify-between
-  sm:gap-[1rem] md:gap-[5rem] lg:gap-[10rem] xl:gap-[20rem] 2xl:gap-[50rem]
-  sm:p-[2rem] md:p-[2.5rem] lg:p-[3rem] xl:p-[3.5rem] 2xl:p-[4rem]
-  p-0 m-0"
+  class="w-full flex flex-col items-center justify-center mobile:flex-row mobile:justify-between
+  mobile:gap-4 tablet:gap-8 laptop:gap-12 fhd:gap-16 qhd:gap-20 uhd:gap-24
+  mobile:p-4 tablet:p-6 laptop:p-8 fhd:p-10 qhd:p-12 uhd:p-16
+  m-0"
 >
-  <Name class="w-full lg:w-[35%] xl:w-[30%] 2xl:w-[25%]" />
-  <Navigation class="w-full lg:w-[35%] xl:w-[30%] 2xl:w-[25%]" />
+  <Name class="w-full laptop:w-[35%] fhd:w-[30%] qhd:w-[25%] uhd:w-[20%]" />
+  <Navigation class="w-full laptop:w-[35%] fhd:w-[30%] qhd:w-[25%] uhd:w-[20%]" />
 </header>

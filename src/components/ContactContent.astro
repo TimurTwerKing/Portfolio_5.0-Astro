@@ -3,20 +3,20 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Contact">
-  <section class="grid grid-rows-[auto_1fr_auto] gap-8 w-full h-full flex-grow">
+  <section class="grid grid-rows-[auto_1fr_auto] gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 fhd:gap-12 qhd:gap-16 uhd:gap-20 w-full h-full flex-grow">
     <!-- CONTENT -->
-    <div class="flex items-end justify-center pt-8">
+    <div class="flex items-end justify-center pt-4 mobile:pt-6 tablet:pt-8 laptop:pt-10">
       <div class="w-full max-w-4xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+        <div class="grid grid-cols-1 laptop:grid-cols-2 gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 w-full">
           <div class="flex flex-col items-start justify-start">
-            <p class="mb-4 text-lg"><strong>Birthdate:</strong> October 31 - 1990</p>
-            <p class="mb-4 text-lg"><strong>Location:</strong> Spain</p>
-            <p class="mb-4 text-lg"><strong>Address:</strong> Orihuela - Alicante</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Birthdate:</strong> October 31 - 1990</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Location:</strong> Spain</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Address:</strong> Orihuela - Alicante</p>
           </div>
           <div class="flex flex-col items-start justify-start">
-            <p class="mb-4 text-lg"><strong>Email:</strong> Timurnator_@outlook.com</p>
-            <p class="mb-4 text-lg"><strong>Phone:</strong> +34 658 440 125</p>
-            <p class="mb-4 text-lg"><strong>Freelancer:</strong> Available</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Email:</strong> Timurnator_@outlook.com</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Phone:</strong> +34 658 440 125</p>
+            <p class="mb-2 mobile:mb-3 tablet:mb-4 text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"><strong>Freelancer:</strong> Available</p>
           </div>
         </div>
       </div>
@@ -25,41 +25,41 @@ import DualLayout from "../layouts/DualLayout.astro";
 
     <!-- SUBCONTENT -->
     <div class="flex items-center justify-center">
-      <form class="w-full max-w-[22rem] sm:max-w-[28rem] mx-auto relative">
-        <div class="mb-6">
+      <form class="w-full max-w-[18rem] mobile:max-w-[20rem] tablet:max-w-[24rem] laptop:max-w-[28rem] fhd:max-w-[32rem] qhd:max-w-[36rem] uhd:max-w-[40rem] mx-auto relative">
+        <div class="mb-4 mobile:mb-5 tablet:mb-6">
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Name..."
-            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-2 mobile:py-3 tablet:py-4 px-3 mobile:px-4 tablet:px-5 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"
           />
         </div>
-        <div class="mb-6">
+        <div class="mb-4 mobile:mb-5 tablet:mb-6">
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Email..."
-            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-2 mobile:py-3 tablet:py-4 px-3 mobile:px-4 tablet:px-5 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"
           />
         </div>
-        <div class="mb-6">
+        <div class="mb-4 mobile:mb-5 tablet:mb-6">
           <input
             type="text"
             id="project"
             name="project"
             placeholder="The project is about..."
-            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-2 mobile:py-3 tablet:py-4 px-3 mobile:px-4 tablet:px-5 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"
           />
         </div>
-        <div class="mb-6">
+        <div class="mb-4 mobile:mb-5 tablet:mb-6">
           <input
             type="text"
             id="budget"
             name="budget"
             placeholder="Budget..."
-            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-2 mobile:py-3 tablet:py-4 px-3 mobile:px-4 tablet:px-5 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"
           />
         </div>
         <div class="relative">
@@ -68,16 +68,16 @@ import DualLayout from "../layouts/DualLayout.astro";
             name="message"
             rows="4"
             placeholder="Message..."
-            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-2 mobile:py-3 tablet:py-4 px-3 mobile:px-4 tablet:px-5 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl"
           ></textarea>
           <button
             type="submit"
-            class="absolute bottom-3 right-3 hover:bg-[var(--total-background)] text-white font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline cursor-pointer"
+            class="absolute bottom-2 mobile:bottom-3 tablet:bottom-4 right-2 mobile:right-3 tablet:right-4 hover:bg-[var(--total-background)] text-white font-bold py-1 mobile:py-2 tablet:py-3 px-2 mobile:px-3 tablet:px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
           >
             <img
               src="/img/send-mail.png"
               alt="Enviar correo"
-              class="w-6 h-6"
+              class="w-5 h-5 mobile:w-6 mobile:h-6 tablet:w-7 tablet:h-7 laptop:w-8 laptop:h-8 fhd:w-10 fhd:h-10 qhd:w-12 qhd:h-12 uhd:w-14 uhd:h-14"
             />
           </button>
         </div>
@@ -85,6 +85,6 @@ import DualLayout from "../layouts/DualLayout.astro";
     </div>
 
     <!-- EMPTY SPACE -->
-    <div class="pb-8"></div>
+    <div class="pb-4 mobile:pb-6 tablet:pb-8 laptop:pb-10"></div>
   </section>
 </DualLayout>

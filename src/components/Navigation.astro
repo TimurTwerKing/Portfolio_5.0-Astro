@@ -8,8 +8,8 @@ const currentPath = Astro.url.pathname;
       w-full h-full
       bg-[var(--component-background)] border border-[var(--border-color)]
       h-[3rem] shadow-none rounded-none my-0 mx-0
-      md:h-[4.25rem] lg:h-[4.75rem] xl:h-[5.5rem] 2xl:h-[6rem]
-      md:shadow-lg
+      mobile:h-[3.5rem] tablet:h-[4rem] laptop:h-[4.5rem] fhd:h-[5rem] qhd:h-[5.5rem] uhd:h-[6rem]
+      mobile:shadow-md tablet:shadow-lg
       transition-all duration-300 ease-in-out
     "
   >
@@ -17,7 +17,7 @@ const currentPath = Astro.url.pathname;
     <a
       href="/about"
       class={[
-        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
         currentPath === "/about" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
       ].join(" ")}
     >
@@ -25,12 +25,13 @@ const currentPath = Astro.url.pathname;
         src="/img/about.png" 
         alt="About Icon" 
         class="
-          w-8 h-8
-          sm:w-[1.6rem] sm:h-[1.6rem]
-          md:w-[1.8rem] md:h-[1.8rem]
-          lg:w-[2rem] lg:h-[2rem]
-          xl:w-8 xl:h-8
-          2xl:w-[2.4rem] 2xl:h-[2.4rem]
+          w-6 h-6
+          mobile:w-7 mobile:h-7
+          tablet:w-8 tablet:h-8
+          laptop:w-9 laptop:h-9
+          fhd:w-10 fhd:h-10
+          qhd:w-12 qhd:h-12
+          uhd:w-14 uhd:h-14
         " 
       />
       ABOUT
@@ -40,7 +41,7 @@ const currentPath = Astro.url.pathname;
     <a
       href="/resume"
       class={[
-        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
         currentPath === "/resume" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
       ].join(" ")}
     >
@@ -48,12 +49,13 @@ const currentPath = Astro.url.pathname;
         src="/img/resume.png" 
         alt="Resume Icon" 
         class="
-          w-8 h-8
-          sm:w-[1.6rem] sm:h-[1.6rem]
-          md:w-[1.8rem] md:h-[1.8rem]
-          lg:w-[2rem] lg:h-[2rem]
-          xl:w-8 xl:h-8
-          2xl:w-[2.4rem] 2xl:h-[2.4rem]
+          w-6 h-6
+          mobile:w-7 mobile:h-7
+          tablet:w-8 tablet:h-8
+          laptop:w-9 laptop:h-9
+          fhd:w-10 fhd:h-10
+          qhd:w-12 qhd:h-12
+          uhd:w-14 uhd:h-14
         " 
       />
       RESUME
@@ -63,7 +65,7 @@ const currentPath = Astro.url.pathname;
     <a
       href="/projects"
       class={[
-        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
         currentPath === "/projects" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
       ].join(" ")}
     >
@@ -71,12 +73,13 @@ const currentPath = Astro.url.pathname;
         src="/img/projects.png" 
         alt="Projects Icon" 
         class="
-          w-8 h-8
-          sm:w-[1.6rem] sm:h-[1.6rem]
-          md:w-[1.8rem] md:h-[1.8rem]
-          lg:w-[2rem] lg:h-[2rem]
-          xl:w-8 xl:h-8
-          2xl:w-[2.4rem] 2xl:h-[2.4rem]
+          w-6 h-6
+          mobile:w-7 mobile:h-7
+          tablet:w-8 tablet:h-8
+          laptop:w-9 laptop:h-9
+          fhd:w-10 fhd:h-10
+          qhd:w-12 qhd:h-12
+          uhd:w-14 uhd:h-14
         " 
       />
       PROJECTS
@@ -86,7 +89,7 @@ const currentPath = Astro.url.pathname;
     <a
       href="/contact"
       class={[
-        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] text-[0.8rem] sm:text-[0.85rem] md:text-[0.95rem] lg:text-[1rem] xl:text-[0.7rem] 2xl:text-[1.15rem] gap-2 p-3 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        "flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
         currentPath === "/contact" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""
       ].join(" ")}
     >
@@ -94,12 +97,13 @@ const currentPath = Astro.url.pathname;
         src="/img/contact.png" 
         alt="Contact Icon" 
         class="
-          w-8 h-8
-          sm:w-[1.6rem] sm:h-[1.6rem]
-          md:w-[1.8rem] md:h-[1.8rem]
-          lg:w-[2rem] lg:h-[2rem]
-          xl:w-8 xl:h-8
-          2xl:w-[2.4rem] 2xl:h-[2.4rem]
+          w-6 h-6
+          mobile:w-7 mobile:h-7
+          tablet:w-8 tablet:h-8
+          laptop:w-9 laptop:h-9
+          fhd:w-10 fhd:h-10
+          qhd:w-12 qhd:h-12
+          uhd:w-14 uhd:h-14
         " 
       />
       CONTACT

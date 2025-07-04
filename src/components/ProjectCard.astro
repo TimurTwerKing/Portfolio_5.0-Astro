@@ -4,14 +4,14 @@ const { title, description, image, link } = Astro.props;
 
 <a
   href={link}
-  class="bg-[var(--total-background)] rounded-lg shadow-md p-3 sm:p-4 flex flex-col items-center transition-all duration-200 hover:scale-[1.03]"
+  class="bg-[var(--total-background)] rounded-lg shadow-md p-3 mobile:p-4 tablet:p-5 laptop:p-6 fhd:p-7 qhd:p-8 uhd:p-10 flex flex-col items-center transition-all duration-200 hover:scale-[1.03]"
 >
-  <div class="w-full h-40 sm:h-48 flex items-center justify-center overflow-hidden">
+  <div class="w-full h-32 mobile:h-36 tablet:h-40 laptop:h-44 fhd:h-48 qhd:h-52 uhd:h-56 flex items-center justify-center overflow-hidden">
     <img src={image} alt={title} class="max-w-full max-h-full object-contain" />
   </div>
 
-  <div class="w-full h-28 sm:h-32 text-center mt-2 flex flex-col justify-center">
-    <h3 class="text-lg sm:text-xl font-semibold mb-1">{title}</h3>
-    <p class="overflow-hidden text-ellipsis text-sm sm:text-base">{description}</p>
+  <div class="w-full h-20 mobile:h-24 tablet:h-28 laptop:h-32 fhd:h-36 qhd:h-40 uhd:h-44 text-center mt-2 mobile:mt-3 tablet:mt-4 flex flex-col justify-center">
+    <h3 class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl font-semibold mb-1">{title}</h3>
+    <p class="overflow-hidden text-ellipsis text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl">{description}</p>
   </div>
 </a>

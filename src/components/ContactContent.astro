@@ -3,20 +3,20 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Contact">
-  <section class="flex flex-col items-center justify-center w-full h-full">
+  <section class="grid grid-rows-[auto_1fr_auto] gap-8 w-full h-full flex-grow">
     <!-- CONTENT -->
-    <div class="flex justify-center w-full sm:mb-[2rem] md:mb-[2.5rem] lg:mb-[3rem] xl:mb-[3.5rem] 2xl:mb-[4rem]">
-      <div class="w-full flex flex-col">
-        <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-[1.5rem] w-full">
-          <div class="flex flex-col items-start justify-start sm:mb-[1.5rem] lg:mb-0">
-            <p class="mb-[0.5rem]"><strong>Birthdate:</strong> October 31 - 1990</p>
-            <p class="mb-[0.5rem]"><strong>Location:</strong> Spain</p>
-            <p class="mb-[0.5rem]"><strong>Address:</strong> Orihuela - Alicante</p>
+    <div class="flex items-end justify-center pt-8">
+      <div class="w-full max-w-4xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+          <div class="flex flex-col items-start justify-start">
+            <p class="mb-4 text-lg"><strong>Birthdate:</strong> October 31 - 1990</p>
+            <p class="mb-4 text-lg"><strong>Location:</strong> Spain</p>
+            <p class="mb-4 text-lg"><strong>Address:</strong> Orihuela - Alicante</p>
           </div>
           <div class="flex flex-col items-start justify-start">
-            <p class="mb-[0.5rem]"><strong>Email:</strong> Timurnator_@outlook.com</p>
-            <p class="mb-[0.5rem]"><strong>Phone:</strong> +34 658 440 125</p>
-            <p class="mb-[0.5rem]"><strong>Freelancer:</strong> Available</p>
+            <p class="mb-4 text-lg"><strong>Email:</strong> Timurnator_@outlook.com</p>
+            <p class="mb-4 text-lg"><strong>Phone:</strong> +34 658 440 125</p>
+            <p class="mb-4 text-lg"><strong>Freelancer:</strong> Available</p>
           </div>
         </div>
       </div>
@@ -24,42 +24,42 @@ import DualLayout from "../layouts/DualLayout.astro";
     
 
     <!-- SUBCONTENT -->
-    <div class="flex-grow flex items-center justify-center w-full sm:py-[1.5rem] md:py-[2rem]">
+    <div class="flex items-center justify-center">
       <form class="w-full max-w-[22rem] sm:max-w-[28rem] mx-auto relative">
-        <div class="mb-[1rem]">
+        <div class="mb-6">
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Name..."
-            class="shadow appearance-none border rounded w-full py-[0.5rem] px-[0.75rem] text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-[1rem]">
+        <div class="mb-6">
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Email..."
-            class="shadow appearance-none border rounded w-full py-[0.5rem] px-[0.75rem] text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-[1rem]">
+        <div class="mb-6">
           <input
             type="text"
             id="project"
             name="project"
             placeholder="The project is about..."
-            class="shadow appearance-none border rounded w-full py-[0.5rem] px-[0.75rem] text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-[1rem]">
+        <div class="mb-6">
           <input
             type="text"
             id="budget"
             name="budget"
             placeholder="Budget..."
-            class="shadow appearance-none border rounded w-full py-[0.5rem] px-[0.75rem] text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div class="relative">
@@ -68,20 +68,23 @@ import DualLayout from "../layouts/DualLayout.astro";
             name="message"
             rows="4"
             placeholder="Message..."
-            class="shadow appearance-none border rounded w-full py-[0.5rem] px-[0.75rem] text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border rounded w-full py-3 px-4 text-[var(--letter-color)] leading-tight focus:outline-none focus:shadow-outline"
           ></textarea>
           <button
             type="submit"
-            class="absolute bottom-[0.5rem] right-[0.5rem] hover:bg-[var(--total-background)] text-white font-bold py-[0.25rem] px-[0.5rem] rounded focus:outline-none focus:shadow-outline cursor-pointer"
+            class="absolute bottom-3 right-3 hover:bg-[var(--total-background)] text-white font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline cursor-pointer"
           >
             <img
               src="/img/send-mail.png"
               alt="Enviar correo"
-              class="w-[1.5rem] h-[1.5rem]"
+              class="w-6 h-6"
             />
           </button>
         </div>
       </form>
     </div>
+
+    <!-- EMPTY SPACE -->
+    <div class="pb-8"></div>
   </section>
 </DualLayout>

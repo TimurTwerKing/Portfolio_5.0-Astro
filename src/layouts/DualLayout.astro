@@ -26,38 +26,40 @@ const { pageName } = Astro.props;
     <script src="/js/theme-toggle.js" defer></script>
   </head>
 
-  <body data-page={pageName.toLowerCase()} class="min-h-screen flex flex-col">
-    <div class="flex flex-col md:flex-row xl:flex-row w-full h-full flex-grow">
-
-      <!-- SECCIÓN IZQUIERDA -->
+  <body
+    data-page={pageName.toLowerCase()}
+    class="min-h-screen flex flex-col bg-[var(--total-background)] text-[var(--letter-color)]"
+  >
+    <main class="flex flex-col lg:flex-row w-full h-screen">
+      <!-- SECCIÓN IZQUIERDA - Index Content -->
       <div
-        class="hidden md:flex md:w-1/2 xl:flex xl:w-1/2 text-[var(--letter-color)] items-center justify-center 
-        p-0 sm:p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20"
+        class="hidden lg:flex lg:w-1/2 items-center justify-center
+        p-8 lg:p-12 xl:p-16 2xl:p-20
+        mt-[10rem]"
       >
         <Index />
       </div>
 
-      <!-- SECCIÓN DERECHA -->
-      <div class="w-full sm:w-1/2 justify-center flex flex-col flex-grow 
-      p-0 sm:p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20">
-        <div
-          class="flex justify-center w-full text-lg md:text-xl lg:text-2xl mx-auto mt-5 sm:mt-0 mb-5"
-        >
-          <div
-            class="w-full md:pt-3 md:pb-10 xl:pt-5 xl:pb-5 tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap"
+      <!-- SECCIÓN DERECHA - Page Content -->
+      <div
+        class="w-full lg:w-1/2 flex flex-col h-full
+      p-8 lg:p-12 xl:p-16 2xl:p-20
+      mt-[10rem]"
+      >
+        <!-- Page Title -->
+        <div class="flex items-end justify-start">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.3rem] md:tracking-[0.5rem] lg:tracking-[0.8rem] whitespace-nowrap"
           >
-            <h1 class="text-6xl md:text-5xl lg:text-5xl whitespace-nowrap">
-              <strong>{pageName}</strong>
-            </h1>
-          </div>
+            <strong>{pageName}</strong>
+          </h1>
         </div>
-        <!-- SLOT CONTENT -->
-        <div
-          class="w-full flex-grow flex flex-col overflow-y-auto min-h-0"
-        >
+
+        <!-- Content Area -->
+        <div class="flex-grow flex flex-col overflow-hidden">
           <slot />
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

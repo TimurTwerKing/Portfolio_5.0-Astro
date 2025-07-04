@@ -3,10 +3,10 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="About Me">
-  <section class="flex flex-col items-center justify-center w-full h-full">
+  <section class="grid grid-rows-[auto_1fr_auto] gap-8 w-full h-full flex-grow">
     <!-- CONTENT -->
-    <div class="flex-grow flex justify-center w-full sm:mb-[2rem] md:mb-[2.5rem] lg:mb-[3rem] xl:mb-[3.5rem] 2xl:mb-[4rem]">
-      <p class="leading-relaxed text-center sm:text-justify text-base sm:text-lg lg:text-xl xl:text-2xl">
+    <div class="flex items-end justify-center pt-8">
+      <p class="leading-relaxed text-center sm:text-justify text-base sm:text-lg lg:text-xl xl:text-2xl max-w-4xl">
         I'm a web programming student with a passion for music and computers. I
         have a professional background in the automotive industry as a painter
         and bodybuilder specialist. I've developed my skills in precision,
@@ -18,11 +18,14 @@ import DualLayout from "../layouts/DualLayout.astro";
     </div>
 
     <!-- SUBCONTENT -->
-    <div class="flex-grow w-full text-left sm:p-[1.5rem] md:p-[2rem]">
-      <span class="text-base sm:text-xl lg:text-2xl font-semibold">
+    <div class="flex items-center justify-center">
+      <span class="text-base sm:text-xl lg:text-2xl font-semibold text-center">
         Following the white rabbit, choosing the right Morpheus pill, and eating
         the Oracle cookie. (<strong>Hope you get the reference!</strong>)
       </span>
     </div>
+
+    <!-- EMPTY SPACE -->
+    <div class="pb-8"></div>
   </section>
 </DualLayout>

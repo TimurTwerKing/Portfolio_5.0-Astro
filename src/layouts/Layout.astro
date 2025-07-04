@@ -46,26 +46,23 @@ const { pageName } = Astro.props;
   </head>
 
   <body
-    class="min-h-screen min-w-screen bg-[var(--total-background)] text-[var(--letter-color)] relative overflow-hidden"
+    class="min-h-screen min-w-screen bg-[var(--total-background)] text-[var(--letter-color)] overflow-hidden"
   >
-    <!-- Header overlay arriba -->
     <header class="absolute top-0 left-0 w-full z-20 pointer-events-auto">
       <Header />
     </header>
 
-    <!-- Main centrado y expandido -->
     <main
-      class="absolute inset-0 flex items-center justify-center z-10
-    sm:px-[6rem] sm:py-[6rem]"
+      class="absolute inset-0 flex items-center justify-center z-10 sm:p-[6rem]"
     >
       <div
-        class="w-full h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow flex items-center justify-center overflow-auto"
+        class="w-full h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow flex items-center justify-center overflow-auto
+         sm:pt-[0rem] sm:pb-[0rem] pt-[10rem] pb-[10rem]"
       >
         <slot />
       </div>
     </main>
 
-    <!-- Footer overlay abajo -->
     <footer class="absolute bottom-0 left-0 w-full z-20 pointer-events-auto">
       <Footer />
     </footer>

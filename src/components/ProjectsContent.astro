@@ -5,16 +5,24 @@ import DualLayout from "../layouts/DualLayout.astro";
 ---
 
 <DualLayout pageName="Projects">
-  <section class="flex flex-col items-center justify-center w-full h-full">
+  <section class="grid grid-rows-[auto_1fr_auto] gap-8 w-full h-full flex-grow">
     <!-- CONTENT -->
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-[1rem] md:gap-[1.5rem] w-full text-gray-700 flex-grow min-h-0"
-    >
-      {
-        projects[0].frontmatter.projects.map((project: any) => (
-          <ProjectCard {...project} />
-        ))
-      }
+    <div class="flex items-end justify-center pt-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl text-gray-700"
+      >
+        {
+          projects[0].frontmatter.projects.map((project: any) => (
+            <ProjectCard {...project} />
+          ))
+        }
+      </div>
     </div>
+
+    <!-- EMPTY SPACE -->
+    <div></div>
+
+    <!-- EMPTY SPACE -->
+    <div class="pb-8"></div>
   </section>
 </DualLayout>

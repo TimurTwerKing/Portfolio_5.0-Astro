@@ -1,27 +1,104 @@
 ---
 const currentPath = Astro.url.pathname;
 ---
-<div class="w-full mobile:w-full tablet:w-[20rem] laptop:w-[25rem] fhd:w-[30rem] qhd:w-[35rem] uhd:w-[40rem] h-auto">
-  <nav class="flex flex-row items-center justify-center text-center w-full h-auto bg-[var(--component-background)] border border-[var(--border-color)] h-[3rem] shadow-none rounded-none my-0 mx-0 mobile:h-[3.5rem] tablet:h-[4rem] laptop:h-[4.5rem] fhd:h-[5rem] qhd:h-[5.5rem] uhd:h-[6rem] mobile:shadow-md tablet:shadow-lg transition-all duration-300 ease-in-out">
-    
-    <a href="/about" class={["flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]", currentPath === "/about" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""].join(" ")}>
-      <img src="/img/about.png" alt="About Icon" class="w-6 h-6 mobile:w-7 mobile:h-7 tablet:w-8 tablet:h-8 laptop:w-9 laptop:h-9 fhd:w-10 fhd:h-10 qhd:w-12 qhd:h-12 uhd:w-14 uhd:h-14" />
-      ABOUT
+
+<div class="w-full h-[3rem]
+  mobile:w-[20rem] mobile:h-[4.5rem]
+  tablet:w-[20rem] tablet:h-[4.5rem]
+  laptop:w-[25rem] laptop:h-[5rem]
+  fhd:w-[30rem] fhd:h-[5.5rem]
+  qhd:w-[35rem] qhd:h-[6rem]
+  uhd:w-[40rem] uhd:h-[6.5rem]"
+>
+  <nav
+    class="flex flex-row items-center justify-center text-center w-full h-[3.5rem] laptop:h-full
+           bg-[var(--component-background)] border border-[var(--border-color)]
+           shadow-none rounded-none my-0 mx-0
+           mobile:shadow-md tablet:shadow-lg
+           transition-all duration-300 ease-in-out"
+  >
+    <a
+      href="/about"
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
+        "font-light tracking-wide laptop:tracking-widest",
+        "text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl",
+        "gap-0.5 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out",
+        "hover:scale-105 hover:shadow-md hover:z-10 hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/about"
+          ? "border-b-2 border-[var(--hover-bg)] font-semibold"
+          : "",
+      ].join(" ")}
+    >
+      <img
+        src="/img/about.png"
+        alt="About Icon"
+        class={["w-5 h-5 mobile:w-6 mobile:h-6 tablet:w-7 tablet:h-7 laptop:w-8 laptop:h-8 opacity-70", currentPath === "/about" ? "opacity-100 saturate-150" : ""].join(" ")}
+      />
+      <span>About</span>
     </a>
 
-    <a href="/resume" class={["flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]", currentPath === "/resume" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""].join(" ")}>
-      <img src="/img/resume.png" alt="Resume Icon" class="w-6 h-6 mobile:w-7 mobile:h-7 tablet:w-8 tablet:h-8 laptop:w-9 laptop:h-9 fhd:w-10 fhd:h-10 qhd:w-12 qhd:h-12 uhd:w-14 uhd:h-14" />
-      RESUME
+    <a
+      href="/resume"
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
+        "font-light tracking-wide laptop:tracking-widest",
+        "text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl",
+        "gap-0.5 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out",
+        "hover:scale-105 hover:shadow-md hover:z-10 hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/resume"
+          ? "border-b-2 border-[var(--hover-bg)] font-semibold"
+          : "",
+      ].join(" ")}
+    >
+      <img
+        src="/img/resume.png"
+        alt="Resume Icon"
+        class={["w-5 h-5 mobile:w-6 mobile:h-6 tablet:w-7 tablet:h-7 laptop:w-8 laptop:h-8 opacity-70", currentPath === "/resume" ? "opacity-100 saturate-150" : ""].join(" ")}
+      />
+      <span>Resume</span>
     </a>
 
-    <a href="/projects" class={["flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] border-r border-[var(--border-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]", currentPath === "/projects" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""].join(" ")}>
-      <img src="/img/projects.png" alt="Projects Icon" class="w-6 h-6 mobile:w-7 mobile:h-7 tablet:w-8 tablet:h-8 laptop:w-9 laptop:h-9 fhd:w-10 fhd:h-10 qhd:w-12 qhd:h-12 uhd:w-14 uhd:h-14" />
-      PROJECTS
+    <a
+      href="/projects"
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
+        "font-light tracking-wide laptop:tracking-widest",
+        "text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl",
+        "gap-0.5 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out",
+        "hover:scale-105 hover:shadow-md hover:z-10 hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/projects"
+          ? "border-b-2 border-[var(--hover-bg)] font-semibold"
+          : "",
+      ].join(" ")}
+    >
+      <img
+        src="/img/projects.png"
+        alt="Projects Icon"
+        class={["w-5 h-5 mobile:w-6 mobile:h-6 tablet:w-7 tablet:h-7 laptop:w-8 laptop:h-8 opacity-70", currentPath === "/projects" ? "opacity-100 saturate-150" : ""].join(" ")}
+      />
+      <span>Projects</span>
     </a>
 
-    <a href="/contact" class={["flex flex-col items-center justify-center text-center h-full flex-1 text-[var(--letter-color)] text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl gap-2 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]", currentPath === "/contact" ? "border-b-4 border-[var(--hover-bg)] bg-transparent font-semibold" : ""].join(" ")}>
-      <img src="/img/contact.png" alt="Contact Icon" class="w-6 h-6 mobile:w-7 mobile:h-7 tablet:w-8 tablet:h-8 laptop:w-9 laptop:h-9 fhd:w-10 fhd:h-10 qhd:w-12 qhd:h-12 uhd:w-14 uhd:h-14" />
-      CONTACT
+    <a
+      href="/contact"
+      class={[
+        "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)]",
+        "font-light tracking-wide laptop:tracking-widest",
+        "text-xs mobile:text-sm tablet:text-base laptop:text-lg fhd:text-xl qhd:text-2xl uhd:text-3xl",
+        "gap-0.5 p-2 mobile:p-3 tablet:p-4 transition-all duration-300 ease-in-out",
+        "hover:scale-105 hover:shadow-md hover:z-10 hover:bg-[var(--hover-bg)] hover:text-[var(--hover-text)] hover:border-[var(--hover-text)]",
+        currentPath === "/contact"
+          ? "border-b-2 border-[var(--hover-bg)] font-semibold"
+          : "",
+      ].join(" ")}
+    >
+      <img
+        src="/img/contact.png"
+        alt="Contact Icon"
+        class={["w-5 h-5 mobile:w-6 mobile:h-6 tablet:w-7 tablet:h-7 laptop:w-8 laptop:h-8 opacity-70", currentPath === "/contact" ? "opacity-100 saturate-150" : ""].join(" ")}
+      />
+      <span>Contact</span>
     </a>
   </nav>
 </div>

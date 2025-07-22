@@ -1,0 +1,21 @@
+---
+import IndexContent from "../components/IndexContent.astro";
+---
+
+<div class="flex flex-col laptop:flex-row w-full h-full overflow-hidden">
+  <!-- Lado izquierdo fijo -->
+  <div
+    class="hidden laptop:flex laptop:w-1/2 items-center justify-center
+      laptop:p-[5rem]"
+  >
+    <IndexContent />
+  </div>
+
+  <!-- Lado derecho con scroll -->
+  <div
+    class="w-full laptop:w-1/2 flex flex-col h-full overflow-y-auto
+      laptop:p-[4rem] mobile:pb-[1.5rem] tablet:pb-[2rem] laptop:pb-[2.5rem] fhd:pb-[3rem] qhd:pb-[4rem] uhd:pb-[5rem]"
+  >
+    <slot />
+  </div>
+</div>

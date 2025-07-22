@@ -1,53 +1,35 @@
-<div class="w-full mobile:w-full tablet:w-[20rem] laptop:w-[25rem] fhd:w-[30rem] qhd:w-[35rem] uhd:w-[40rem] h-auto">
-  <a href="/" class="no-underline w-full h-auto" aria-label="Inicio">
+<div
+  class="w-full h-[3rem]
+  mobile:w-[20rem] mobile:h-[4.5rem]
+  tablet:w-[20rem] tablet:h-[4.5rem]
+  laptop:w-[25rem] laptop:h-[5rem]
+  fhd:w-[30rem] fhd:h-[5.5rem]
+  qhd:w-[35rem] qhd:h-[6rem]
+  uhd:w-[40rem] uhd:h-[6.5rem]"
+>
+  <a href="/" class="no-underline w-full h-full" aria-label="Inicio">
     <div
-      class="
-        /* Layout */
-        flex flex-col items-center justify-center text-center 
-        w-full h-auto
-
-        /* Styling */
-        bg-[var(--component-background)] 
-        border border-[var(--border-color)]
-
-        /* Mobile appearance */
-        h-[3rem] shadow-none rounded-none my-0 mx-0
-
-        /* Desktop enhancements */
-        mobile:h-[3.5rem] tablet:h-[4rem] laptop:h-[4.5rem] fhd:h-[5rem] qhd:h-[5.5rem] uhd:h-[6rem]
-        mobile:shadow-md tablet:shadow-lg
-
-        /* Transition */
-        transition-all duration-300 ease-in-out hover:mobile:shadow-lg hover:tablet:shadow-xl
-      "
+      class="flex flex-col items-center justify-center text-center w-full h-full
+             bg-[var(--component-background)] border border-[var(--border-color)]
+             shadow-none rounded-none my-0 mx-0
+             mobile:shadow-md tablet:shadow-lg
+             transition-all duration-300 ease-in-out
+             hover:mobile:shadow-lg hover:tablet:shadow-xl"
     >
       <h1
-        class="
-          /* Typography */
-          font-bold text-[var(--letter-color)] 
-          tracking-[0.5rem] mobile:tracking-[0.6rem] tablet:tracking-[0.7rem] laptop:tracking-[0.8rem] fhd:tracking-[0.9rem] qhd:tracking-[1rem] uhd:tracking-[1.2rem]
-
-          /* Size responsive */
-          text-lg mobile:text-xl tablet:text-2xl laptop:text-3xl fhd:text-4xl qhd:text-5xl uhd:text-6xl
-
-          /* Spacing */
-          mt-[0.4rem]
-        "
+        class="font-bold text-[var(--letter-color)]
+               tracking-[1rem] laptop:tracking-[0.8rem] fhd:tracking-[0.9rem] qhd:tracking-[1rem] uhd:tracking-[1.2rem]
+               text-xl mobile:text-xl tablet:text-2xl laptop:text-3xl
+               fhd:text-4xl qhd:text-5xl uhd:text-6xl
+               mt-[0.4rem]"
       >
         TIMUR BOGACH
       </h1>
-
       <p
-        class="
-          /* Typography */
-          text-[var(--letter-color)]
-
-          /* Size responsive */
-          text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl
-
-          /* Spacing */
-          mt-[-0.4rem] mb-[0.4rem]
-        "
+        class="text-[var(--letter-color)]
+               text-sm mobile:text-base tablet:text-lg laptop:text-xl
+               fhd:text-2xl qhd:text-3xl uhd:text-4xl
+               mt-[-0.4rem] mb-[0.4rem]"
       >
         full stack developer
       </p>

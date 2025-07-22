@@ -2,7 +2,12 @@
 import "../styles/global.css";
 import Header from "../components/HeaderContent.astro";
 import Footer from "../components/FooterContent.astro";
-const { title } = Astro.props;
+import Name from "../components/Name.astro";
+import Navigation from "../components/Navigation.astro";
+import SocialMedia from "../components/SocialMedia.astro";
+import DualMain from "./DualMain.astro";
+
+const { title, dual = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,9 +15,10 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
 
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -20,53 +26,61 @@ const { title } = Astro.props;
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" />
 
     <script>
       (function () {
         try {
-          var themes = ["variant-1", "variant-2", "variant-3"];
-          var savedTheme = localStorage.getItem("theme");
-          if (savedTheme && themes.includes(savedTheme)) {
-            document.documentElement.classList.add(savedTheme);
-          } else {
-            document.documentElement.classList.add("variant-1");
-          }
+          const themes = ["variant-1", "variant-2", "variant-3"];
+          const savedTheme = localStorage.getItem("theme");
+          document.documentElement.classList.add(
+            savedTheme && themes.includes(savedTheme) ? savedTheme : "variant-1"
+          );
         } catch (e) {}
       })();
     </script>
-
     <script src="/js/theme-init.js" is:inline></script>
     <script src="/js/theme-toggle.js" defer></script>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Poiret+One"
-      rel="stylesheet"
-    />
-
-    <title>{title}</title>
   </head>
 
-  <body
-    class="min-h-screen min-w-screen bg-[var(--total-background)] text-[var(--letter-color)] overflow-hidden"
-  >
-    <header class="absolute top-0 left-0 w-full z-20 pointer-events-auto">
+  <body class="min-h-screen min-w-screen bg-[var(--total-background)] text-[var(--letter-color)] overflow-hidden">
+    
+    <!-- MOBILE HEADER & FOOTER -->
+    <header class="block laptop:hidden absolute top-0 left-0 w-full z-30 pointer-events-auto">
       <Header />
     </header>
+    <footer class="block laptop:hidden absolute bottom-0 left-0 w-full z-30 pointer-events-auto">
+      <Footer />
+    </footer>
 
-    <main
-      class="absolute inset-0 flex items-center justify-center z-10 
-        mobile:p-60 tablet:p-8 laptop:p-12 fhd:p-16 qhd:p-20 uhd:p-24"
-    >
+    <!-- DESKTOP FIXED ELEMENTS -->
+    <div class="hidden laptop:flex fixed top-[3rem] left-[3rem] z-40">
+      <Name />
+    </div>
+    <div class="hidden laptop:flex fixed top-[3rem] right-[3rem] z-40">
+      <Navigation />
+    </div>
+    <div class="hidden laptop:flex fixed bottom-[3rem] left-[3rem] z-40">
+      <SocialMedia />
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="absolute inset-x-0 top-[6rem] bottom-[2rem] laptop:inset-0 flex items-center justify-center w-full h-auto z-20 laptop:p-[6rem]">
       <div
-        class="w-full h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow flex items-center justify-center overflow-auto
-          pt-[10rem] pb-[10rem] mobile:pt-[8rem] mobile:pb-[8rem] tablet:pt-[6rem] tablet:pb-[6rem]"
+        class="w-full h-full box-border bg-[var(--page-background)] border border-[var(--border-color)] shadow
+               flex items-center justify-center overflow-auto p-[1rem] laptop:px-0 laptop:pt-0 laptop:pb-0"
       >
-        <slot />
+        {
+          dual ? (
+            <DualMain>
+              <slot />
+            </DualMain>
+          ) : (
+            <slot />
+          )
+        }
       </div>
     </main>
 
-    <footer class="absolute bottom-0 left-0 w-full mobile:w-full tablet:w-auto laptop:w-auto fhd:w-auto qhd:w-auto uhd:w-auto z-20 pointer-events-auto">
-      <Footer />
-    </footer>
   </body>
 </html>

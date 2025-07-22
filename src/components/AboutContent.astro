@@ -1,31 +1,14 @@
----
-import DualLayout from "../layouts/DualLayout.astro";
----
-
-<DualLayout pageName="About Me">
-  <section class="grid grid-rows-[auto_1fr_auto] gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 fhd:gap-12 qhd:gap-16 uhd:gap-20 w-full h-full flex-grow">
-    <!-- CONTENT -->
-    <div class="flex items-end justify-center pt-4 mobile:pt-6 tablet:pt-8 laptop:pt-10">
-      <p class="leading-relaxed text-center tablet:text-justify text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl max-w-4xl">
-        I'm a web programming student with a passion for music and computers. I
-        have a professional background in the automotive industry as a painter
-        and bodybuilder specialist. I've developed my skills in precision,
-        patience, and attention to detail for over 10 years. Known for my humor
-        and energetic personality. I look forward to collaborating with
-        professionals who share my enthusiasm for growing in this industry like
-        a mushroom.
-      </p>
-    </div>
-
-    <!-- SUBCONTENT -->
-    <div class="flex items-center justify-center">
-      <span class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl font-semibold text-center">
-        Following the white rabbit, choosing the right Morpheus pill, and eating
-        the Oracle cookie. (<strong>Hope you get the reference!</strong>)
-      </span>
-    </div>
-
-    <!-- EMPTY SPACE -->
-    <div class="pb-4 mobile:pb-6 tablet:pb-8 laptop:pb-10"></div>
-  </section>
-</DualLayout>
+<section class="grid grid-rows-[auto_1fr_auto] w-full gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 fhd:gap-12 qhd:gap-16 uhd:gap-20">
+  <!-- CONTENT -->
+  <div class="flex items-end justify-center">
+    <p class="leading-relaxed text-center tablet:text-justify text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl max-w-4xl">
+      I'm a web programming student with a passion for music and computers. I have a professional background in the automotive industry as a painter and bodybuilder specialist. I've developed my skills in precision, patience, and attention to detail for over 10 years. Known for my humor and energetic personality. I look forward to collaborating with professionals who share my enthusiasm for growing in this industry like a mushroom.
+    </p>
+  </div>
+  <!-- SUBCONTENT -->
+  <div class="flex items-center justify-center">
+    <span class="text-sm mobile:text-base tablet:text-lg laptop:text-xl fhd:text-2xl qhd:text-3xl uhd:text-4xl font-semibold text-center">
+      Following the white rabbit, choosing the right Morpheus pill, and eating the Oracle cookie. (<strong>Hope you get the reference!</strong>)
+    </span>
+  </div>
+</section>

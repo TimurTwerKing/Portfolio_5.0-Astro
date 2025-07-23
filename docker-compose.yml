@@ -36,7 +36,7 @@ services:
       - PIHOLE_DNS_=1.1.1.1;8.8.8.8
       - WEB_PORT=8053
     ports:
-      - "8053:8053/tcp"   # Panel web: http://raspberryIP:8053/admin
+      - "8053:8053/tcp"
       - "53:53/tcp"
       - "53:53/udp"
     volumes:

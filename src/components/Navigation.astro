@@ -1,5 +1,5 @@
 ---
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <div class="w-full h-[3rem]
@@ -19,6 +19,7 @@ const currentPath = Astro.url.pathname;
   >
     <a
       href="/about"
+      aria-current={currentPath === "/about" ? "page" : undefined}
       class={[
         "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
         "font-light tracking-wide laptop:tracking-widest",
@@ -40,6 +41,7 @@ const currentPath = Astro.url.pathname;
 
     <a
       href="/resume"
+      aria-current={currentPath === "/resume" ? "page" : undefined}
       class={[
         "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
         "font-light tracking-wide laptop:tracking-widest",
@@ -61,6 +63,7 @@ const currentPath = Astro.url.pathname;
 
     <a
       href="/projects"
+      aria-current={currentPath === "/projects" ? "page" : undefined}
       class={[
         "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)] border-r border-[var(--border-color)]",
         "font-light tracking-wide laptop:tracking-widest",
@@ -82,6 +85,7 @@ const currentPath = Astro.url.pathname;
 
     <a
       href="/contact"
+      aria-current={currentPath === "/contact" ? "page" : undefined}
       class={[
         "flex flex-col items-center justify-center text-center h-full flex-1 min-w-0 overflow-hidden text-[var(--letter-color)]",
         "font-light tracking-wide laptop:tracking-widest",
